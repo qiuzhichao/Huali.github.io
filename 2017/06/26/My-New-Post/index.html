@@ -282,15 +282,17 @@
   
   
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
 <script>
-  var cloudTieConfig = {
-    url: "qiuzhichao.me/2017/06/26/My-New-Post/", 
-    sourceId: "My-New-Post",
-    productKey: "true",
-    target: "cloud-tie-wrapper"
-  };
+var cloudTieConfig = {
+  url: document.location.href, 
+  sourceId: "",
+  productKey: "df77cfbb601147a6881a844d98ec8e92",
+  target: "cloud-tie-wrapper"
+};
+var yunManualLoad = true;
+Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
 </script>
-<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   
 
   
