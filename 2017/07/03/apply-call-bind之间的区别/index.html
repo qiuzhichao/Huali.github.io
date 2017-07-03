@@ -15,7 +15,7 @@
 <meta property="og:url" content="qiuzhichao.me/2017/07/03/apply-call-bind之间的区别/index.html">
 <meta property="og:site_name" content="Francis">
 <meta property="og:description" content="apply方法apply方法，他让我们构造一个参数传递给函数，同时可以自己来设置this的值。apply函数接收2个参数，第一个是传递给条用这个方法的函数绑定的this取值，第二个是传递给函数的参数数组！ 1234567function a(xxx)&amp;#123;	this.a=xxx;&amp;#125;var o=&amp;#123;&amp;#125;;a.apply(o,[5]);alert(a.b);//unde">
-<meta property="og:updated_time" content="2017-07-03T10:04:52.776Z">
+<meta property="og:updated_time" content="2017-07-03T10:08:13.680Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="apply&#x2F;call&#x2F;bind之间的区别">
 <meta name="twitter:description" content="apply方法apply方法，他让我们构造一个参数传递给函数，同时可以自己来设置this的值。apply函数接收2个参数，第一个是传递给条用这个方法的函数绑定的this取值，第二个是传递给函数的参数数组！ 1234567function a(xxx)&amp;#123;	this.a=xxx;&amp;#125;var o=&amp;#123;&amp;#125;;a.apply(o,[5]);alert(a.b);//unde">
@@ -181,9 +181,7 @@
 <h3 id="call方法"><a href="#call方法" class="headerlink" title="call方法"></a>call方法</h3><p>call方法和apply方法的区别只是第二个参数的形式改变仅此而已</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span>(xx,yy)&#123;</div><div class="line">	alert(xx,yy);</div><div class="line">	alert(this);</div><div class="line">	alert(arguments);</div><div class="line">&#125;</div><div class="line">a.apply(null,[5,55]);</div><div class="line">a.call(null,5,55);</div></pre></td></tr></table></figure>
 <h3 id="bind"><a href="#bind" class="headerlink" title="bind()"></a>bind()</h3><p>最后来说bind()函数，上面讲的无论是call()也好，apply()也好，都是立马就调用了对应的函数，而bind()不会，bind()会生成一个新的函数，bind()函数的参数跟call()一致，第一个参数也是绑定this的值，后面接收传递给函数的不定参数。bind()生成新的函数返回后，想什么时候调就什么时候调。</p>
-<p>```bash<br>var m={<br>    “x”:1<br>};<br>function foo(y){<br>    alert(this.x+y);<br>}</p>
-<p>foo.apply(m,[5]);<br>foo.call(m,5);<br>var foo1=foo.bind(m,5);<br>foo1();</p>
-
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var m=&#123;</div><div class="line">	<span class="string">"x"</span>:1</div><div class="line">&#125;;</div><div class="line"><span class="keyword">function</span> foo(y)&#123;</div><div class="line">	alert(this.x+y);</div><div class="line">&#125;</div><div class="line"></div><div class="line">foo.apply(m,[5]);</div><div class="line">foo.call(m,5);</div><div class="line">var foo1=foo.bind(m,5);</div><div class="line">foo1();</div></pre></td></tr></table></figure>
       
 
       
