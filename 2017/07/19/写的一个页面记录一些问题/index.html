@@ -15,7 +15,7 @@
 <meta property="og:url" content="qiuzhichao.me/2017/07/19/写的一个页面记录一些问题/index.html">
 <meta property="og:site_name" content="Francis">
 <meta property="og:description" content="一个手机端签到页面引发的惨案蛮久没写手机端页面了，接到设计图（其实就是一张图尺寸都是自己来估摸），咔咔的个把小时就写完了，回顾一下我发现的自己问题吧！ 页面布局只是一张大的背景图，然后几个input框！ 产品经理要求input框里的placeholder距离左边要有距离，开始并不知道怎么控制placeholder的距离，查了下直接给input框设置css属性： 1text-indent: xxpx">
-<meta property="og:updated_time" content="2017-07-19T10:11:53.481Z">
+<meta property="og:updated_time" content="2017-07-19T10:18:45.278Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="写一个页面记录一些问题">
 <meta name="twitter:description" content="一个手机端签到页面引发的惨案蛮久没写手机端页面了，接到设计图（其实就是一张图尺寸都是自己来估摸），咔咔的个把小时就写完了，回顾一下我发现的自己问题吧！ 页面布局只是一张大的背景图，然后几个input框！ 产品经理要求input框里的placeholder距离左边要有距离，开始并不知道怎么控制placeholder的距离，查了下直接给input框设置css属性： 1text-indent: xxpx">
@@ -184,8 +184,8 @@
 <p>关于背景图的设定</p>
 <h3 id="background-size"><a href="#background-size" class="headerlink" title="background-size"></a>background-size</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">background-size: length|percentage|cover|contain;</div><div class="line">length:</div><div class="line">设置背景图片的高度和宽度。第一个值是设置宽度，第二个值是设置高度！如果只设置一个值，则第二个值会被设置为<span class="string">"auto"</span>；</div><div class="line">percentage:</div><div class="line">衣服元素的百分比来设定背景图像的宽度和高度，第一个值设置宽度，第二个值设置高度，如果只设置一个值，则第二个值会被设置为<span class="string">"auto"</span>；background-size：100%; background-size：100% 100%;</div><div class="line">cover:</div><div class="line">将图片扩展至足够大，以使背景图完全覆盖背景区域，个人觉得不推荐使用这种，会把图片拉伸，失真，与background-size：100% 100%;有异曲同工之妙；</div><div class="line">contain:</div><div class="line">把图像图像扩展至最大尺寸，以使其宽度和高度完全适应内容区域,这个与上面的区别在于下面的会自适应，所以不会拉伸图片，但是在适配小的手机机型时，图片不能铺满！推荐使用 ！</div></pre></td></tr></table></figure>
 <p>我最后用了background-size：100%;去适配了我的背景图！后面就是各种适配手机，这里吐槽一下乐视手机，非要特殊化！</p>
-<h3 id="后面js数据交互"><a href="#后面js数据交互" class="headerlink" title="后面js数据交互"></a>后面js数据交互</h3><p>本着能不用框架就不用框架的心，我就用起了document.get….！后面我发现了一个奇怪的问题,在我来写这篇博客时我还在想…然而我是个彩笔！<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var tel=document.getElementById(<span class="string">"tel"</span>);</div><div class="line">tel.onblur=<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">		console.log(tel.value);</div><div class="line">	&#125;</div><div class="line">这样是可以输出的！</div><div class="line">var tel=document.getElementById(<span class="string">"tel"</span>);</div><div class="line">var txt=tel.value;</div><div class="line">tel.onblur=<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">		console.log(txt);</div><div class="line">&#125;</div><div class="line">这样console出来的是空的！</div></pre></td></tr></table></figure></p>
-<p>我在这兜兜转转了两个小时，一直很纳闷！望群公，请洒潘江，各倾陆海云尔！为我解惑（私信）！</p>
+<h3 id="后面js数据交互"><a href="#后面js数据交互" class="headerlink" title="后面js数据交互"></a>后面js数据交互</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">本着能不用框架就不用框架的心，我就用起了document.get....！后面我发现了一个奇怪的问题,在我来写这篇博客时我还在想...然而我是个彩笔！</div><div class="line">```bash</div><div class="line"> var tel=document.getElementById(&quot;tel&quot;);</div><div class="line"> tel.onblur=function()&#123;</div><div class="line">			console.log(tel.value);</div><div class="line">		&#125;</div><div class="line"> 这样是可以输出的！</div><div class="line"> var tel=document.getElementById(&quot;tel&quot;);</div><div class="line"> var txt=tel.value;</div><div class="line"> tel.onblur=function()&#123;</div><div class="line">			console.log(txt);</div><div class="line">	&#125;</div><div class="line">	这样console出来的是空的！</div></pre></td></tr></table></figure>
+<h3 id="简单的ajax"><a href="#简单的ajax" class="headerlink" title="简单的ajax"></a>简单的ajax</h3><p>```bash<br>var req= new XMLHttpRequest();<br>    var url =”<a href="http://xxxx/xxx/xxxx/xxx/xxx?phone=&quot;+tel.value+&quot;&amp;name=&quot;+name.value+&quot;&amp;company=&quot;+company.value+" target="_blank" rel="external">http://xxxx/xxx/xxxx/xxx/xxx?phone=&quot;+tel.value+&quot;&amp;name=&quot;+name.value+&quot;&amp;company=&quot;+company.value+</a>“”;<br>    req.open(“GET”,url,true);<br>    req.send();<br>    req.onreadystatechange=function(){<br>        if(req.readyState == 4 &amp;&amp; req.status == 200){<br>            alert(“签到成功”);<br>            tel.value=””;<br>            name.value=””;<br>            company.value=””;<br>        }<br>}<br>我在这兜兜转转了两个小时，一直很纳闷！望群公，请洒潘江，各倾陆海云尔！为我解惑（私信）！</p>
 
       
 
@@ -417,11 +417,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
