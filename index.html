@@ -169,14 +169,9 @@
         <h2 id="九月是我最喜欢的一个月份，September！"><a href="#九月是我最喜欢的一个月份，September！" class="headerlink" title="九月是我最喜欢的一个月份，September！"></a>九月是我最喜欢的一个月份，September！</h2><p>九月，与人的心境很契合，湛蓝的天空飘着几朵棉花云，微风徐来，回首那一抹嫣然！<br>而我也是九月人生。</p>
 <hr>
 <p>八月里，公司事情也不多，一直对于Vue很向往，后面就自己着手折腾了！自己写了一个<a href="https://github.com/qiuzhichao/vue-" target="_blank" rel="external">VueDemo</a><br>不完善之处，尽情谅解！慢慢加油中….</p>
-<h3 id="说说碰到的坑吧（没啥大坑，一路磕磕绊绊）！"><a href="#说说碰到的坑吧（没啥大坑，一路磕磕绊绊）！" class="headerlink" title="说说碰到的坑吧（没啥大坑，一路磕磕绊绊）！"></a>说说碰到的坑吧（没啥大坑，一路磕磕绊绊）！</h3><p>其实也不是第一次接触Vue，以前会用原生vue，写点东西，没有写过大型项目！这次就结合Vue-cli把我们公司的M站，写了一下</p>
-<p><strong>1</strong> template下面应该包含一个根元素！ps:就是用一个大div把它们都包含起来！</p>
-<p><strong>2</strong> 防止单个组件滑动：只要在组件上的父元素加上 @touchmove.prevent！</p>
-<p><strong>3</strong> 为了给Vue一个提示，以便它能跟踪每个节点的身份，从而重用和重新排序现有元素，你需要为<br>每项提供一个唯一的key属性。理想的key是每一项都有唯一的id。这个特殊的属性相当于<br> Vue 1.x 的 track-by ，但它的工作方式类似于一个属性，所以你需要用 v-bind 来绑定动态值.<br>建议尽可能使用 v-for 来提供 key ，除非迭代 DOM 内容足够简单，或者你是故意要依赖于默认行为来获得性能提升。<br>因为他是Vue识别节点的一个通用机制，key并不特别与v-for关联，key还有其他的用途<br>这就是为什么我们用v-for的时候在Vue组件上面使用的 这个时候 我们需要给他加上:key=”xxx”<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;router-link v-for=<span class="string">"n in 100"</span> :key=<span class="string">"n"</span>&gt;&lt;/router-link&gt;</div></pre></td></tr></table></figure></p>
-<p>这样子就不要报错了！</p>
-<p><strong>4</strong>期间还发现了不关于vue的问题，js的伪类：在同一个页面内 selector：nth-child(index) index必须从1至下，就算selector不同，index也要接着上个selector的index！</p>
-<p>还有些其他的，我也忘了，记性不大好！</p>
-
+        
+          <a class="article-more-a" href="/2017/09/13/九月/#more">more >></a>
+        
       
 
       
