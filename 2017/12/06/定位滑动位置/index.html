@@ -6,21 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://qiuzhichao.me">
-  <title>定时器 | Francis</title>
+  <title>定位滑动位置 | Francis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="遇到的关于定时器的问题，记录一下！！公司做双十一团购活动，被一个循环定时器给憋住了！  1、说一说问题是啥！ 如上图所见：如果有很多个团就得有很多个定时器，每个倒计时时间是不一样，结束时间也就是不一样了；所以定时器的循环出来，数据咋传，咋展示就是问题了！ 方法： HTML:123456&amp;lt;ul&amp;gt;	&amp;lt;li data-time=&quot;10000&quot;&amp;gt;&amp;lt;/li&amp;gt;	&amp;lt;li">
-<meta name="keywords" content="javascript">
+  <meta name="description" content="需求: 用户在浏览列表浏览时，点击一个列表进去详情页，返回要求记录用户刚刚浏览的位置，而不是刷新页面到了页面顶部！（ps：用户刷到几十几百条的时候，不应该让用户重新开始） sessionStorage： 针对一个session的数据存储（关闭窗口，存储的数据清空），将数据存到session中，管你前进后退还是刷新，数据依然存在，关闭窗口后再进页面才会清空数据！ 实现思路: 页面滚动，将滚动位置存到">
+<meta name="keywords" content="JQ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="定时器">
-<meta property="og:url" content="http://qiuzhichao.me/2017/10/20/定时器/index.html">
+<meta property="og:title" content="定位滑动位置">
+<meta property="og:url" content="http://qiuzhichao.me/2017/12/06/定位滑动位置/index.html">
 <meta property="og:site_name" content="Francis">
-<meta property="og:description" content="遇到的关于定时器的问题，记录一下！！公司做双十一团购活动，被一个循环定时器给憋住了！  1、说一说问题是啥！ 如上图所见：如果有很多个团就得有很多个定时器，每个倒计时时间是不一样，结束时间也就是不一样了；所以定时器的循环出来，数据咋传，咋展示就是问题了！ 方法： HTML:123456&amp;lt;ul&amp;gt;	&amp;lt;li data-time=&quot;10000&quot;&amp;gt;&amp;lt;/li&amp;gt;	&amp;lt;li">
-<meta property="og:image" content="http://otdpf38ea.bkt.clouddn.com/team.png">
-<meta property="og:updated_time" content="2017-10-20T08:43:38.290Z">
+<meta property="og:description" content="需求: 用户在浏览列表浏览时，点击一个列表进去详情页，返回要求记录用户刚刚浏览的位置，而不是刷新页面到了页面顶部！（ps：用户刷到几十几百条的时候，不应该让用户重新开始） sessionStorage： 针对一个session的数据存储（关闭窗口，存储的数据清空），将数据存到session中，管你前进后退还是刷新，数据依然存在，关闭窗口后再进页面才会清空数据！ 实现思路: 页面滚动，将滚动位置存到">
+<meta property="og:updated_time" content="2017-12-06T03:23:46.898Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="定时器">
-<meta name="twitter:description" content="遇到的关于定时器的问题，记录一下！！公司做双十一团购活动，被一个循环定时器给憋住了！  1、说一说问题是啥！ 如上图所见：如果有很多个团就得有很多个定时器，每个倒计时时间是不一样，结束时间也就是不一样了；所以定时器的循环出来，数据咋传，咋展示就是问题了！ 方法： HTML:123456&amp;lt;ul&amp;gt;	&amp;lt;li data-time=&quot;10000&quot;&amp;gt;&amp;lt;/li&amp;gt;	&amp;lt;li">
-<meta name="twitter:image" content="http://otdpf38ea.bkt.clouddn.com/team.png">
+<meta name="twitter:title" content="定位滑动位置">
+<meta name="twitter:description" content="需求: 用户在浏览列表浏览时，点击一个列表进去详情页，返回要求记录用户刚刚浏览的位置，而不是刷新页面到了页面顶部！（ps：用户刷到几十几百条的时候，不应该让用户重新开始） sessionStorage： 针对一个session的数据存储（关闭窗口，存储的数据清空），将数据存到session中，管你前进后退还是刷新，数据依然存在，关闭窗口后再进页面才会清空数据！ 实现思路: 页面滚动，将滚动位置存到">
   
     <link rel="alternative" href="/atom.xml" title="Francis" type="application/atom+xml">
   
@@ -148,37 +146,31 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-定时器" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-定位滑动位置" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      定时器
+      定位滑动位置
     </h1>
   
 
         
-        <a href="/2017/10/20/定时器/" class="archive-article-date">
-  	<time datetime="2017-10-20T07:17:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-20</time>
+        <a href="/2017/12/06/定位滑动位置/" class="archive-article-date">
+  	<time datetime="2017-12-06T03:06:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="遇到的关于定时器的问题，记录一下！！"><a href="#遇到的关于定时器的问题，记录一下！！" class="headerlink" title="遇到的关于定时器的问题，记录一下！！"></a>遇到的关于定时器的问题，记录一下！！</h2><p>公司做双十一团购活动，被一个循环定时器给憋住了！</p>
-<hr>
-<p><strong>1、</strong><br>说一说问题是啥！<br> <img src="http://otdpf38ea.bkt.clouddn.com/team.png"><br>如上图所见：如果有很多个团就得有很多个定时器，每个倒计时时间是不一样，结束时间也就是不一样了；所以定时器的循环出来，数据咋传，咋展示就是问题了！</p>
-<p><strong>方法：</strong></p>
-<h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML:"></a>HTML:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;ul&gt;</div><div class="line">	&lt;li data-time=<span class="string">"10000"</span>&gt;&lt;/li&gt;</div><div class="line">	&lt;li data-time=<span class="string">"5000"</span>&gt;&lt;/li&gt;</div><div class="line">	&lt;li data-time=<span class="string">"20000"</span>&gt;&lt;/li&gt;</div><div class="line">	...</div><div class="line">&lt;/ul&gt;</div></pre></td></tr></table></figure>
-<p>上面的data-time是后台传输的时间戳！！</p>
-<h3 id="JS："><a href="#JS：" class="headerlink" title="JS："></a>JS：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">	<span class="keyword">function</span> zero(e)&#123;</div><div class="line">	<span class="built_in">return</span> e&lt;10?<span class="string">"0"</span>+e:e;</div><div class="line">&#125;</div><div class="line">	先写好定时器方法:</div><div class="line"></div><div class="line">	<span class="keyword">function</span> countDown(endtime,fn)&#123;</div><div class="line">		var o=endtime/1000;</div><div class="line">		var timer=setInterval(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">			var D=parseInt(o/(24*60*60)),</div><div class="line">				H=parseInt(o/(60*60)%24),</div><div class="line">				M=parseInt(o/60%60),</div><div class="line">				S=parseInt(o%60);</div><div class="line">				<span class="keyword">if</span>(o&gt;=0)&#123;</div><div class="line">					var msg=<span class="string">"距离结束还有："</span>+zero(D)+<span class="string">"天："</span>+zero(H)+<span class="string">"小时："</span>+zero(M)+<span class="string">"分钟："</span>+zero(S)+<span class="string">"秒"</span>;</div><div class="line">					fn(msg);</div><div class="line">					o--;</div><div class="line">				&#125;<span class="keyword">else</span>&#123;</div><div class="line">					clearsetInterval(timer);</div><div class="line">					fn(<span class="string">"Time Over"</span>);</div><div class="line">				&#125;</div><div class="line">			&#125;,1000)</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+        <p><strong>需求</strong>: 用户在浏览列表浏览时，点击一个列表进去详情页，返回要求记录用户刚刚浏览的位置，而不是刷新页面到了页面顶部！（ps：用户刷到几十几百条的时候，不应该让用户重新开始）</p>
+<p><strong>sessionStorage</strong>： 针对一个session的数据存储（<strong>关闭窗口，存储的数据清空</strong>），将数据存到session中，管你前进后退还是刷新，数据依然存在，关闭窗口后再进页面才会清空数据！</p>
+<p><strong>实现思路</strong>: 页面滚动，将<strong>滚动位置存到session中</strong>-&gt; 再次进入页面中，到<strong>session中取出上次保存的浏览位置</strong>-&gt; 滚动到<strong>对应的位置</strong></p>
 <a id="more"></a>
-<h3 id="循环方法："><a href="#循环方法：" class="headerlink" title="循环方法："></a>循环方法：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var lis=documentsgetElentByTagName(<span class="string">"li"</span>);</div><div class="line"><span class="keyword">for</span>(var i=0;i&lt;lis.length;i++)&#123;</div><div class="line">	lis[i].className=<span class="string">"team"</span>+i;</div><div class="line">	var endtime=lis[i].getAttribute(<span class="string">"data-time"</span>);</div><div class="line">	counyDown(endtime,<span class="keyword">function</span>(msg)&#123;</div><div class="line">		docunment.getElementsByClassName(<span class="string">"team"</span>+i)[0].innterHTML(msg);</div><div class="line">	&#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">onload=<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">	var lis=documentsgetElentByTagName(<span class="string">"li"</span>);</div><div class="line">	<span class="keyword">for</span>(var i=0;i&lt;lis.length;i++)&#123;</div><div class="line">		lis[i].className=<span class="string">"team"</span>+i;</div><div class="line">		var endtime=lis[i].getAttribute(<span class="string">"data-time"</span>);</div><div class="line">		countDown(endtime,<span class="keyword">function</span>(msg)&#123;</div><div class="line">			docunment.getElementsByClassName(<span class="string">"team"</span>+i)[0].innterHTML(msg);</div><div class="line">		&#125;)</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">function</span> zero(e)&#123;</div><div class="line">	<span class="built_in">return</span> e&lt;10?<span class="string">"0"</span>+e:e;</div><div class="line">&#125;</div><div class="line">先写好定时器方法:</div><div class="line"></div><div class="line"><span class="keyword">function</span> countDown(endtime,fn)&#123;</div><div class="line">	var o=endtime/1000;</div><div class="line">	var timer=setInterval(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">		var D=parseInt(o/(24*60*60)),</div><div class="line">			H=parseInt(o/(60*60)%24),</div><div class="line">			M=parseInt(o/60%60),</div><div class="line">			S=parseInt(o%60);</div><div class="line">			<span class="keyword">if</span>(o&gt;=0)&#123;</div><div class="line">				var msg=<span class="string">"距离结束还有："</span>+zero(D)+<span class="string">"天："</span>+zero(H)+<span class="string">"小时："</span>+zero(M)+<span class="string">"分钟："</span>+zero(S)+<span class="string">"秒"</span>;</div><div class="line">				fn(msg);</div><div class="line">				o--;</div><div class="line">			&#125;<span class="keyword">else</span>&#123;</div><div class="line">				clearsetInterval(timer);</div><div class="line">				fn(<span class="string">"Time Over"</span>);</div><div class="line">			&#125;</div><div class="line">		&#125;,1000)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>好记性不如烂笔头！！！</p>
+<p><strong>实现代码</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">//滚动是保存位置</div><div class="line">$(window).scroll(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">	<span class="keyword">if</span>($(document).scrollTop()!=0)&#123;</div><div class="line">		sessionStorage.setItem(<span class="string">"offsetTop"</span>,$(window).scrollTop());//保存滚动位置</div><div class="line">	&#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line">//onload时,取出并滚动到上次保存的位置</div><div class="line">window.onload=<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">	var _offset=sessionStorage.getItem(<span class="string">"offsetTop"</span>);</div><div class="line">	<span class="keyword">if</span>(_offset!=null)&#123;</div><div class="line">		$(document).scrollTop(_offset);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
 
@@ -213,7 +205,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JQ</a>
         		</li>
       		
 		</ul>
@@ -269,7 +261,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://qiuzhichao.me/2017/10/20/定时器/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://qiuzhichao.me/2017/12/06/定位滑动位置/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -283,18 +275,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/10/25/AJAX/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          AJAX
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/09/13/九月/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">九月</div>
+    <a href="/2017/11/28/事件委托/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">事件委托</div>
       <i class="icon-circle-right"></i>
     </a>
   
