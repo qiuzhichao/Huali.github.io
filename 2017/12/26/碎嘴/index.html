@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://qiuzhichao.me/2017/12/26/碎嘴/index.html">
 <meta property="og:site_name" content="Francis">
 <meta property="og:description" content="最近跟后台讨论的一些js的小东西，（后台是PHP）PHP是世界上最好的语言？ 由于他在js里操作数组，于是： 12345678910111213141516concat(): arr1.concat(arr2) //合并数组indexOf(): str.indexOf(&quot;xxx&quot;) //判断元素是否在数组内，找的到返回index，找不到返回-1;sort():arr.sort();arr.sort">
-<meta property="og:updated_time" content="2017-12-26T07:57:11.522Z">
+<meta property="og:updated_time" content="2017-12-26T07:58:47.994Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="碎嘴">
 <meta name="twitter:description" content="最近跟后台讨论的一些js的小东西，（后台是PHP）PHP是世界上最好的语言？ 由于他在js里操作数组，于是： 12345678910111213141516concat(): arr1.concat(arr2) //合并数组indexOf(): str.indexOf(&quot;xxx&quot;) //判断元素是否在数组内，找的到返回index，找不到返回-1;sort():arr.sort();arr.sort">
@@ -173,7 +173,7 @@
         <p>最近跟后台讨论的一些js的小东西，（后台是PHP）PHP是世界上最好的语言？</p>
 <p>由于他在js里操作数组，于是：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">concat(): arr1.concat(arr2) //合并数组</div><div class="line">indexOf(): str.indexOf(<span class="string">"xxx"</span>) //判断元素是否在数组内，找的到返回index，找不到返回-1;</div><div class="line">sort():arr.sort();arr.sort(<span class="keyword">function</span>)//数组排序;</div><div class="line">push():arr.push(<span class="string">"xxx"</span>)//在数组末尾加一个或多个元素;</div><div class="line">slice():该方法不会修改数组，而是返回一个子数组</div><div class="line">splice():该方法可删除从index处开始的0个会多个元素，并且用参数列表中声明的一个或多个值来替换那些被删除的元素。</div><div class="line">		<span class="built_in">return</span>出来的是含有被删除元素的数组！！</div><div class="line">		var arr2=new Array(4);</div><div class="line">		arr2[0]=<span class="string">"jani"</span></div><div class="line">		arr2[1]=<span class="string">"hege"</span></div><div class="line">		arr2[2]=<span class="string">"stale"</span></div><div class="line">		arr2[3]=<span class="string">"kai jim"</span></div><div class="line">		arr2[4]=<span class="string">"borge"</span>;</div><div class="line">		console.log(arr2);</div><div class="line">		console.log(arr2.slice(0));//[<span class="string">"jani"</span>,<span class="string">"hege"</span>,<span class="string">"stale"</span>,<span class="string">"kai jim"</span>,<span class="string">"borge"</span>]</div><div class="line">		console.log(arr2.splice(1,1));//[<span class="string">"hege"</span>]</div></pre></td></tr></table></figure>
-<p><strong>disable只对表单元素(button)有效果</strong></p>
+<p><strong>disable</strong>只对表单元素(button)有效果</p>
 <p><strong>BUG:</strong><br>在此之间写了个登录页面用到了border-radius这个属性，页面出来后在苹果机、华为机都没有出现啥异常！但是在chrome和小米手机自带的浏览器上输入框点击后会浮现圆角之前直角框(黄色)<br><strong>解决:</strong><br>在input的css里写上outline:none;</p>
 <p><strong>a标签</strong>上附加了onclic事件，当某种情况下取消点击事件(上面讲的disable一开始想在这里了):removeAttr(“onclick”);</p>
 
