@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://qiuzhichao.me">
-  <title>事件委托 | Francis</title>
+  <title>懒加载 | Francis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="事件委托：利用事件冒泡的特性，将里层的事件委托给外层事件，根据event对象的属性进行事件委托，改善性能。使用事件委托能够避免对特定的每个节点添加事件监听器；事件监听器是被添加到他们的父元素上。事件监听器会分析从子元素冒泡上来的事件，找到是哪个子元素的事件。（官方语言） 例子多的很： 123456789101112131415161718192021222324252627282930313233">
-<meta name="keywords" content="javascript">
+  <meta name="description" content="这近两个月，可真的有点忙！今天才算是差不多完工。休闲时光，回顾回顾！可能很久没用lazyload插件了，不知道是怎么了，怎么都实现不了效果！ 于是就有想法写一个简单的懒加载的方法。。。 机制：懒加载，就是当页面滚动到可视页面的时候加载，避免一进入页面大量加载数据，到时页面加载缓慢，甚至崩掉（特别是电商网站）。123456789101112131415161718192021222324252627">
+<meta name="keywords" content="JQ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="事件委托">
-<meta property="og:url" content="http://qiuzhichao.me/2017/11/28/事件委托/index.html">
+<meta property="og:title" content="懒加载">
+<meta property="og:url" content="http://qiuzhichao.me/2018/02/09/懒加载/index.html">
 <meta property="og:site_name" content="Francis">
-<meta property="og:description" content="事件委托：利用事件冒泡的特性，将里层的事件委托给外层事件，根据event对象的属性进行事件委托，改善性能。使用事件委托能够避免对特定的每个节点添加事件监听器；事件监听器是被添加到他们的父元素上。事件监听器会分析从子元素冒泡上来的事件，找到是哪个子元素的事件。（官方语言） 例子多的很： 123456789101112131415161718192021222324252627282930313233">
-<meta property="og:updated_time" content="2017-11-28T08:34:14.648Z">
+<meta property="og:description" content="这近两个月，可真的有点忙！今天才算是差不多完工。休闲时光，回顾回顾！可能很久没用lazyload插件了，不知道是怎么了，怎么都实现不了效果！ 于是就有想法写一个简单的懒加载的方法。。。 机制：懒加载，就是当页面滚动到可视页面的时候加载，避免一进入页面大量加载数据，到时页面加载缓慢，甚至崩掉（特别是电商网站）。123456789101112131415161718192021222324252627">
+<meta property="og:updated_time" content="2018-02-09T07:21:25.738Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="事件委托">
-<meta name="twitter:description" content="事件委托：利用事件冒泡的特性，将里层的事件委托给外层事件，根据event对象的属性进行事件委托，改善性能。使用事件委托能够避免对特定的每个节点添加事件监听器；事件监听器是被添加到他们的父元素上。事件监听器会分析从子元素冒泡上来的事件，找到是哪个子元素的事件。（官方语言） 例子多的很： 123456789101112131415161718192021222324252627282930313233">
+<meta name="twitter:title" content="懒加载">
+<meta name="twitter:description" content="这近两个月，可真的有点忙！今天才算是差不多完工。休闲时光，回顾回顾！可能很久没用lazyload插件了，不知道是怎么了，怎么都实现不了效果！ 于是就有想法写一个简单的懒加载的方法。。。 机制：懒加载，就是当页面滚动到可视页面的时候加载，避免一进入页面大量加载数据，到时页面加载缓慢，甚至崩掉（特别是电商网站）。123456789101112131415161718192021222324252627">
   
     <link rel="alternative" href="/atom.xml" title="Francis" type="application/atom+xml">
   
@@ -150,30 +150,30 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-事件委托" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-懒加载" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      事件委托
+      懒加载
     </h1>
   
 
         
-        <a href="/2017/11/28/事件委托/" class="archive-article-date">
-  	<time datetime="2017-11-28T08:18:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-28</time>
+        <a href="/2018/02/09/懒加载/" class="archive-article-date">
+  	<time datetime="2018-02-09T06:19:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>事件委托</strong>：利用事件冒泡的特性，将里层的事件委托给外层事件，根据event对象的属性进行事件委托，改善性能。使用事件委托能够避免对特定的每个节点添加事件监听器；事件监听器是被添加到他们的父元素上。事件监听器会分析从子元素冒泡上来的事件，找到是哪个子元素的事件。（官方语言）</p>
-<p>例子多的很：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line">&lt;table id=<span class="string">"table"</span> border=<span class="string">"1"</span> style=<span class="string">"cursor: pointer;"</span>&gt;</div><div class="line">    &lt;tr&gt;</div><div class="line">    　　&lt;td&gt;table01&lt;/td&gt;</div><div class="line">    　　&lt;td&gt;table02&lt;/td&gt;</div><div class="line">    　　&lt;td&gt;table03&lt;/td&gt;</div><div class="line">    　　&lt;td&gt;table04&lt;/td&gt;</div><div class="line">    　　&lt;td&gt;table05&lt;/td&gt;</div><div class="line">    　　&lt;td&gt;table06&lt;/td&gt;</div><div class="line">    　　&lt;td&gt;table07&lt;/td&gt;</div><div class="line">    　　&lt;td&gt;table08&lt;/td&gt;</div><div class="line">    　　&lt;td&gt;table09&lt;/td&gt;</div><div class="line">    　　&lt;td&gt;table10&lt;/td&gt;</div><div class="line">    &lt;/tr&gt;</div><div class="line">&lt;/table&gt;</div><div class="line"></div><div class="line">//js</div><div class="line">var table = document.getElementById(<span class="string">"table"</span>);</div><div class="line">    <span class="keyword">if</span>(table.addEventListener)&#123;</div><div class="line">    	//addEventListener()是标准的绑定事件监听函数的方法，是W3C所支持的，Chrome、FireFox、Opera、Safari、IE9.0其以上版本都支持干函数，但是IE8.0及其以下版本不支持该方法，他是使用attachEvent()来绑定事件监听函数。所以、这种绑定事件的方法必须要处理浏览器兼容问题！</div><div class="line">        table.addEventListener(<span class="string">"click"</span>,<span class="keyword">function</span>(e)&#123;</div><div class="line">            var e = e||window.event;</div><div class="line">            //IE没有e.target，有e.srcElement</div><div class="line">            var target = e.target||e.srcElement;</div><div class="line">            //判断事件目标是否是td，是的话target即为目标节点td</div><div class="line">            <span class="keyword">if</span>(target.tagName.toLowerCase()==<span class="string">"td"</span>)&#123;</div><div class="line">                changeStyle(target);</div><div class="line">                console.log(target.innerHTML);</div><div class="line">            &#125;</div><div class="line">        &#125;,<span class="literal">false</span>);</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        table.attachEvent(<span class="string">"onclick"</span>,<span class="keyword">function</span>(e)&#123;</div><div class="line">            var e = e||window.event;</div><div class="line">            //IE没有e.target，有e.srcElement</div><div class="line">            var target = e.target||e.srcElement;</div><div class="line">            //判断事件目标是否是td，是的话target即为目标节点td</div><div class="line">            <span class="keyword">if</span>(target.tagName.toLowerCase()==<span class="string">"td"</span>)&#123;</div><div class="line">                changeStyle(target);</div><div class="line">                console.log(target.innerHTML);</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &#125;;</div><div class="line">     //JQ写法</div><div class="line">    	$(<span class="string">"#table"</span>).on(<span class="string">"click"</span>,<span class="string">"td"</span>,<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">    		changeStyle($(this));</div><div class="line">     		console.log($(this).html())</div><div class="line">    &#125;)</div><div class="line"><span class="keyword">function</span> changeStyle(ele)&#123;</div><div class="line">    ele.innerHTML = <span class="string">"已点击"</span></div><div class="line">    ele.style.background=<span class="string">"#900"</span>;</div><div class="line">    ele.style.color = <span class="string">"#fff"</span>; </div><div class="line">//JQ</div><div class="line">	ele.html(<span class="string">"已点击"</span>);	</div><div class="line">	ele.css(&#123;<span class="string">"background-color"</span>:<span class="string">"#900"</span>,<span class="string">"color"</span>:<span class="string">"#fff"</span>&#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>这里可以看到我们并没有对所有的td绑定事件而是给他们的父元素table绑定事件，极大的提高了性能，这样做还可以对动态加进来的元素进行处理，即未来元素，用直接绑定方法是不能成功的，只能用事件委托，上上篇blog说到的live()也可以解决但是JQ 1.3版本后废弃了这个功能！事件委托是通过事件冒泡实现的，所以子元素阻止了事件冒泡，那么委托事件也将失效！</p>
+        <p>这近两个月，可真的有点忙！今天才算是差不多完工。休闲时光，回顾回顾！<br>可能很久没用lazyload插件了，不知道是怎么了，怎么都实现不了效果！</p>
+<p>于是就有想法写一个简单的懒加载的方法。。。</p>
+<p><strong>机制：</strong>懒加载，就是当页面滚动到可视页面的时候加载，避免一进入页面大量加载数据，到时页面加载缓慢，甚至崩掉（特别是电商网站）。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">loading</span></span>()&#123;</div><div class="line">	//图片懒加载</div><div class="line">	var <span class="variable">$window</span>=$(window);</div><div class="line">	//获取包含data-src属性的img，并以jq对象存入数组，在需要懒加载的img上加上data-src属性里面放上需要加载图的链接</div><div class="line">	var lazyImgs=$(<span class="string">"img[data-src]"</span>);</div><div class="line">	//定义函数事件</div><div class="line">	var onScroll=<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">		//获取页面滚动的高度</div><div class="line">		var wtop=<span class="variable">$window</span>.scrollTop();</div><div class="line">		<span class="keyword">if</span>(lazyImgs.length&gt;0)&#123;//判断是否还有未加载的图片</div><div class="line">			var wheight=<span class="variable">$window</span>.height();</div><div class="line">			//循环处理数组里的每个img元素;</div><div class="line">			$.each(lazyImgs,<span class="keyword">function</span>(index,value)&#123;</div><div class="line">				//判断是否在可视区域内</div><div class="line">				<span class="keyword">if</span>($(value).offset().top-wtop&lt;wheight)&#123;</div><div class="line">					$(value).attr(<span class="string">'src'</span>,$(value).attr(<span class="string">'data-src'</span>));</div><div class="line">				&#125;</div><div class="line">			&#125;);</div><div class="line">			//做的删除处理 浏览器有缓存机制，可有可无</div><div class="line">			//$.each(loadedIndex,<span class="keyword">function</span>(index)&#123;</div><div class="line">					lazyImgs.splice(index+1,1)</div><div class="line">				//&#125;)</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	//绑定事件</div><div class="line">	<span class="variable">$window</span>.scroll(onScroll);</div><div class="line">	//手动触发一次</div><div class="line">	onScroll()</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>以上就是我粗糙的一个懒加载，基本实现了我的需求！</p>
 
       
 
@@ -208,7 +208,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JQ</a>
         		</li>
       		
 		</ul>
@@ -264,7 +264,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://qiuzhichao.me/2017/11/28/事件委托/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://qiuzhichao.me/2018/02/09/懒加载/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -278,18 +278,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/12/06/定位滑动位置/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          定位滑动位置
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/11/24/关于layer/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">关于layer</div>
+    <a href="/2017/12/26/碎嘴/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">碎嘴</div>
       <i class="icon-circle-right"></i>
     </a>
   
