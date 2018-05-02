@@ -150,6 +150,92 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-可真够懒的" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/02/可真够懒的/">可真够懒的</a>
+    </h1>
+  
+
+        
+        <a href="/2018/05/02/可真够懒的/" class="archive-article-date">
+  	<time datetime="2018-05-02T07:38:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="劳动节刚过，这一年也到了五月了！自己还是毫无成长，无半点成就。"><a href="#劳动节刚过，这一年也到了五月了！自己还是毫无成长，无半点成就。" class="headerlink" title="劳动节刚过，这一年也到了五月了！自己还是毫无成长，无半点成就。"></a>劳动节刚过，这一年也到了五月了！自己还是毫无成长，无半点成就。</h2><p>想要说点什么，在敲了几行之后，又觉得说的是屁话。耳边都是蜩螗沸羹，心里思绪纷乱！</p>
+<p>我该如何存在！（汪峰的嘶吼）</p>
+<p>这段时间做了个公众号：<img src="http://otdpf38ea.bkt.clouddn.com/jg.png"></p>
+<p>贴在这，没啥想法有意者可关注！</p>
+<h2 id="公众号是用的vue。"><a href="#公众号是用的vue。" class="headerlink" title="公众号是用的vue。"></a>公众号是用的vue。</h2><p>去年年末，还是比自己去自学了vue，学了点皮毛就接了点活(心可真大)！不过也是由于这个公众号简单。</p>
+<p><strong>需求:</strong><br>可供用户搜索浏览淘宝或天猫上的商品，<strong>领券</strong>！<br>大部分是页面展示没什么太大的技术难点！</p>
+<p><strong>坑</strong><br>由于有很多页面，跳来跳去，所以要优化用户体验！需要记录用户的浏览位置，但是呢不是所有的页面需要记录！我很纳闷为啥vue返回上一个页面会重新加载数据！</p>
+<p><strong>流程</strong><br>搜索页-&gt;列表页-&gt;商品详情页、<br>商品详情页-&gt;列表页、<br>首页-&gt;列表页-&gt;商品详情页。</p>
+<p>搜索页到列表页每次是需要数据更新，列表页到详情页需要数据更新。详情页到列表页需要回到进入前的位置。<br>首页到列表页每次是需要数据更新，列表页到详情页需要数据更新。详情页到列表页需要回到进入前的位置。</p>
+<p>第一时间想到了$router.back()但是不起作用，后面用了网上的方法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">const scrollBehavior=(to,from,savedPosition)=&gt;&#123;</div><div class="line">  <span class="keyword">if</span>(savedPosition)&#123;</div><div class="line">  		<span class="built_in">return</span> savedPosition</div><div class="line"> 		&#125;<span class="keyword">else</span>&#123;</div><div class="line">		<span class="built_in">let</span> position=&#123;&#125;</div><div class="line"><span class="keyword">if</span>(to.matched.length&lt;2)&#123;</div><div class="line">      position=&#123;x:0,y:0&#125;</div><div class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(to.matched.some((r)=&gt;r.components.default.options.scrollToTop))&#123;</div><div class="line">      position=&#123;x:0,y:0&#125;</div><div class="line">   	&#125;</div><div class="line">    <span class="keyword">if</span>(to.hash)&#123;</div><div class="line">      position=&#123;selector:to.hash&#125;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">return</span> position</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>也不起作用！！！<br>
+        
+          <a class="article-more-a" href="/2018/05/02/可真够懒的/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/05/02/可真够懒的/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-懒加载" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -856,84 +942,6 @@
 
 
   
-    <article id="post-九月" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/13/九月/">九月</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/13/九月/" class="archive-article-date">
-  	<time datetime="2017-09-13T05:47:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="九月是我最喜欢的一个月份，September！"><a href="#九月是我最喜欢的一个月份，September！" class="headerlink" title="九月是我最喜欢的一个月份，September！"></a>九月是我最喜欢的一个月份，September！</h2><p>九月，与人的心境很契合，湛蓝的天空飘着几朵棉花云，微风徐来，回首那一抹嫣然！<br>而我也是九月人生。</p>
-<hr>
-<p>八月里，公司事情也不多，一直对于Vue很向往，后面就自己着手折腾了！自己写了一个<a href="https://github.com/qiuzhichao/vue-" target="_blank" rel="external">VueDemo</a><br>不完善之处，尽情谅解！慢慢加油中….</p>
-        
-          <a class="article-more-a" href="/2017/09/13/九月/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/13/九月/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1040,6 +1048,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
             
             <div class="clearfix"></div>
