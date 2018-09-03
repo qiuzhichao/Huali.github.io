@@ -150,6 +150,83 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-AJAX" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/25/AJAX/">AJAX</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/25/AJAX/" class="archive-article-date">
+  	<time datetime="2017-10-25T03:01:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="封装AJAX"><a href="#封装AJAX" class="headerlink" title="封装AJAX"></a>封装AJAX</h2><p>AJAX即”Asynchronous Javascript And XML”(异步JavaScript和XML)，是指一种创建交互式网页应用的网页开发技术。是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。通过在后台与服务器进行少量数据交换，AJAX可以使网页实现异步更新！</p>
+<h3 id="参考网上资料结合自己实践"><a href="#参考网上资料结合自己实践" class="headerlink" title="参考网上资料结合自己实践"></a>参考网上资料结合自己实践</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> Ajax(<span class="built_in">type</span>,url,data,success,faild)&#123;</div><div class="line">	//创建对象</div><div class="line">	var xhr=null;</div><div class="line">	<span class="keyword">if</span>(window.XMLHttpRequest)&#123;</div><div class="line">	   xhr=new XMLHttpRequest()</div><div class="line">	&#125;<span class="keyword">else</span>&#123;</div><div class="line">		//兼容IE6</div><div class="line">		xhr=new ActiveXobject(<span class="string">'Microsoft.XMLHTTP'</span>)</div><div class="line">	&#125;</div><div class="line">	var <span class="built_in">type</span>=type.toUpperCase();</div><div class="line">	//用于清缓存</div><div class="line">	var random=Math.random();</div><div class="line">	<span class="keyword">if</span>(typeof data==<span class="string">'object'</span>)&#123;</div><div class="line">		var str=<span class="string">''</span>;</div><div class="line">		<span class="keyword">for</span>(key <span class="keyword">in</span> data)&#123;</div><div class="line">			str+=key+<span class="string">"="</span>data[key]+<span class="string">"&amp;"</span></div><div class="line">		&#125;</div><div class="line">		data=str.replace(/&amp;$/,<span class="string">''</span>)</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span>(<span class="built_in">type</span>==<span class="string">"GET"</span>)&#123;</div><div class="line">		<span class="keyword">if</span>(data)&#123;</div><div class="line">			xhr.open(<span class="string">'GET'</span>,url+<span class="string">"?"</span>+data,<span class="literal">true</span>);</div><div class="line">		&#125;<span class="keyword">else</span>&#123;</div><div class="line">			xhr.open(<span class="string">'GET'</span>,url+<span class="string">"?t="</span>+random,<span class="literal">true</span>);</div><div class="line">		&#125;</div><div class="line">		xhr.send()</div><div class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">type</span>==<span class="string">"POST"</span>)&#123;</div><div class="line">		xhr.open(<span class="string">'POST'</span>,url)</div><div class="line">		//如果需要向HTML表单那样POST数据请使用setRequestHeader()来添加http头。</div><div class="line">		xhr.setRequestHeader(<span class="string">"Content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>);</div><div class="line">		xhr.send(data);</div><div class="line">	&#125;</div><div class="line">	//处理返回数据</div><div class="line">	xhr.onreadystatechange=<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">		<span class="keyword">if</span>(xhr.readyState==4)&#123;</div><div class="line">			<span class="keyword">if</span>(xhr.status==200)&#123;</div><div class="line">				success(xhr.responseText);</div><div class="line">			&#125;<span class="keyword">else</span>&#123;</div><div class="line">				<span class="keyword">if</span>(failed)&#123;</div><div class="line">					failed(xhr.status)</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/10/25/AJAX/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/25/AJAX/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-定时器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -489,10 +566,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
@@ -501,7 +574,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">JQ</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
             <div class="clearfix"></div>

@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://qiuzhichao.me">
-  <title>碎嘴 | Francis</title>
+  <title>正则表达式 | Francis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近跟后台讨论的一些js的小东西，（后台是PHP）PHP是世界上最好的语言？ 由于他在js里操作数组，于是： 12345678910111213141516concat(): arr1.concat(arr2) //合并数组indexOf(): str.indexOf(&quot;xxx&quot;) //判断元素是否在数组内，找的到返回index，找不到返回-1;sort():arr.sort();arr.sort">
-<meta name="keywords" content="javascript">
+  <meta name="description" content="又到了久违的九月。。。我似乎闻到到了酒味，一个郁郁的中年大叔。再不好好审视自己，就得成为锅里的那只青蛙，就算我不喝酒。。。 正则 一直觉得正则是火星文，也学过，但是后面一直懒没有去温习，导致现在就是一碰就得百度。  在这里可以练习正则地址！！！ 1、匹配任意字符”.”123456/./g    &amp;lt;!--匹配任意字符 断行除外--&amp;gt;var str=&quot;abc&quot;/./g    可以匹配str">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="碎嘴">
-<meta property="og:url" content="http://qiuzhichao.me/2017/12/26/碎嘴/index.html">
+<meta property="og:title" content="正则表达式">
+<meta property="og:url" content="http://qiuzhichao.me/2018/09/03/正则表达式/index.html">
 <meta property="og:site_name" content="Francis">
-<meta property="og:description" content="最近跟后台讨论的一些js的小东西，（后台是PHP）PHP是世界上最好的语言？ 由于他在js里操作数组，于是： 12345678910111213141516concat(): arr1.concat(arr2) //合并数组indexOf(): str.indexOf(&quot;xxx&quot;) //判断元素是否在数组内，找的到返回index，找不到返回-1;sort():arr.sort();arr.sort">
-<meta property="og:updated_time" content="2017-12-26T08:05:22.467Z">
+<meta property="og:description" content="又到了久违的九月。。。我似乎闻到到了酒味，一个郁郁的中年大叔。再不好好审视自己，就得成为锅里的那只青蛙，就算我不喝酒。。。 正则 一直觉得正则是火星文，也学过，但是后面一直懒没有去温习，导致现在就是一碰就得百度。  在这里可以练习正则地址！！！ 1、匹配任意字符”.”123456/./g    &amp;lt;!--匹配任意字符 断行除外--&amp;gt;var str=&quot;abc&quot;/./g    可以匹配str">
+<meta property="og:updated_time" content="2018-09-03T09:01:12.817Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="碎嘴">
-<meta name="twitter:description" content="最近跟后台讨论的一些js的小东西，（后台是PHP）PHP是世界上最好的语言？ 由于他在js里操作数组，于是： 12345678910111213141516concat(): arr1.concat(arr2) //合并数组indexOf(): str.indexOf(&quot;xxx&quot;) //判断元素是否在数组内，找的到返回index，找不到返回-1;sort():arr.sort();arr.sort">
+<meta name="twitter:title" content="正则表达式">
+<meta name="twitter:description" content="又到了久违的九月。。。我似乎闻到到了酒味，一个郁郁的中年大叔。再不好好审视自己，就得成为锅里的那只青蛙，就算我不喝酒。。。 正则 一直觉得正则是火星文，也学过，但是后面一直懒没有去温习，导致现在就是一碰就得百度。  在这里可以练习正则地址！！！ 1、匹配任意字符”.”123456/./g    &amp;lt;!--匹配任意字符 断行除外--&amp;gt;var str=&quot;abc&quot;/./g    可以匹配str">
   
     <link rel="alternative" href="/atom.xml" title="Francis" type="application/atom+xml">
   
@@ -150,31 +150,45 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-碎嘴" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-正则表达式" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      碎嘴
+      正则表达式
     </h1>
   
 
         
-        <a href="/2017/12/26/碎嘴/" class="archive-article-date">
-  	<time datetime="2017-12-26T07:26:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-26</time>
+        <a href="/2018/09/03/正则表达式/" class="archive-article-date">
+  	<time datetime="2018-09-03T07:02:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近跟后台讨论的一些js的小东西，（后台是PHP）PHP是世界上最好的语言？</p>
-<p>由于他在js里操作数组，于是：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">concat(): arr1.concat(arr2) //合并数组</div><div class="line">indexOf(): str.indexOf(<span class="string">"xxx"</span>) //判断元素是否在数组内，找的到返回index，找不到返回-1;</div><div class="line">sort():arr.sort();arr.sort(<span class="keyword">function</span>)//数组排序;</div><div class="line">push():arr.push(<span class="string">"xxx"</span>)//在数组末尾加一个或多个元素;</div><div class="line">slice():该方法不会修改数组，而是返回一个子数组</div><div class="line">splice():该方法可删除从index处开始的0个会多个元素，并且用参数列表中声明的一个或多个值来替换那些被删除的元素。</div><div class="line">		<span class="built_in">return</span>出来的是含有被删除元素的数组！！</div><div class="line">		var arr2=new Array(4);</div><div class="line">		arr2[0]=<span class="string">"jani"</span></div><div class="line">		arr2[1]=<span class="string">"hege"</span></div><div class="line">		arr2[2]=<span class="string">"stale"</span></div><div class="line">		arr2[3]=<span class="string">"kai jim"</span></div><div class="line">		arr2[4]=<span class="string">"borge"</span>;</div><div class="line">		console.log(arr2);</div><div class="line">		console.log(arr2.slice(0));//[<span class="string">"jani"</span>,<span class="string">"hege"</span>,<span class="string">"stale"</span>,<span class="string">"kai jim"</span>,<span class="string">"borge"</span>]</div><div class="line">		console.log(arr2.splice(1,1));//[<span class="string">"hege"</span>]</div></pre></td></tr></table></figure>
-<p><strong>disable</strong>只对表单元素(button)有效果<br><a id="more"></a><br><strong>BUG:</strong><br>在此之间写了个登录页面用到了border-radius这个属性，页面出来后在苹果机、华为机都没有出现啥异常！但是在chrome和小米手机自带的浏览器上输入框点击后会浮现圆角之前直角框(黄色)<br><strong>解决:</strong><br>在input的css里写上outline:none;</p>
-<p><strong>a标签</strong>上附加了onclic事件，当某种情况下取消点击事件(上面讲的disable一开始想在这里了):removeAttr(“onclick”);</p>
+        <h2 id="又到了久违的九月。。。我似乎闻到到了酒味，一个郁郁的中年大叔。"><a href="#又到了久违的九月。。。我似乎闻到到了酒味，一个郁郁的中年大叔。" class="headerlink" title="又到了久违的九月。。。我似乎闻到到了酒味，一个郁郁的中年大叔。"></a>又到了久违的九月。。。我似乎闻到到了酒味，一个郁郁的中年大叔。</h2><p>再不好好审视自己，就得成为锅里的那只青蛙，就算我不喝酒。。。</p>
+<p><strong>正则</strong></p>
+<p>一直觉得正则是火星文，也学过，但是后面一直懒没有去温习，导致现在就是一碰就得百度。 </p>
+<p>在这里可以练习正则<a href="https://regexr.com" target="_blank" rel="external">地址</a>！！！</p>
+<p><strong>1、匹配任意字符”.”</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/./g    &lt;!--匹配任意字符 断行除外--&gt;</div><div class="line"></div><div class="line">var str=<span class="string">"abc"</span></div><div class="line">/./g    可以匹配</div><div class="line">str=<span class="string">"a.bc"</span></div><div class="line">/a\.bc/   转义 \. 明确就是匹配 <span class="string">"."</span></div></pre></td></tr></table></figure></p>
+<p><strong>2、匹配字母和数字</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var str=<span class="string">"123456789"</span></div><div class="line">    str=<span class="string">"abcdefg"</span></div><div class="line">    str=<span class="string">"ABCDEFG"</span></div><div class="line">/\w/g    匹配所有大小写英文字母和数字下划线也包括</div><div class="line">\W  就是反之，除了数字和字母加下划线 列如:+-*￥</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p><strong>3、匹配数字</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var str=<span class="string">"123456789"</span></div><div class="line">    str=<span class="string">"ahsnkdjanhs"</span></div><div class="line">/\d/g   匹配数字</div><div class="line">\D     匹配所有不是数字的包括空格！</div></pre></td></tr></table></figure></p>
+<p><strong>4、匹配空白字符</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">    var str=<span class="string">"123456789          "</span></div><div class="line">/\s/g  匹配所有空格 tab 和换行</div><div class="line">\S     反之</div></pre></td></tr></table></figure></p>
+<p><strong>5、字符集合</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">   var str=<span class="string">"abcdefg"</span>;</div><div class="line">       str=<span class="string">"ABCDF"</span>;</div><div class="line">       str=<span class="string">"0123456789"</span></div><div class="line">/[a<span class="_">-d</span>]/g  匹配a到d的集合</div><div class="line">/[A-D]/g  匹配大写A到D 的集合 </div><div class="line">/[0-9]/g  匹配0到9的区间</div><div class="line"></div><div class="line">如果要取的字符是中文的 那就要用unicode的编码去取   就是第一个字到最后一个字的区间</div><div class="line">        str=<span class="string">"哦哦哦哦哦"</span></div><div class="line"> /[\u4e00-\u9fa5]/g   第一个是  <span class="string">"一"</span> 最后一个是<span class="string">"龥"</span> 反正在这个区间里的中文字都会被匹配</div></pre></td></tr></table></figure></p>
+<p><strong>6、重复一次或多次</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">  var str=<span class="string">"yo"</span></div><div class="line">      str=<span class="string">"yooooo"</span></div><div class="line">      str=<span class="string">"Yoo"</span></div><div class="line">      str=<span class="string">"YOO"</span></div><div class="line">/[yY][oO]+/g   大小写都匹配，o<span class="string">"+"</span>重复一次或多次。</div></pre></td></tr></table></figure></p>
+<p><strong>7、重复0个或多个</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"> var str=<span class="string">"yo"</span></div><div class="line">     str=<span class="string">"yooooo"</span></div><div class="line">     str=<span class="string">"Yoo"</span></div><div class="line">     str=<span class="string">"YOO"</span></div><div class="line">     str=<span class="string">"yo!"</span></div><div class="line">     str=<span class="string">"yo."</span></div><div class="line">     str=<span class="string">"yo~~"</span></div><div class="line">/[yY][oO]+[!~\.]*/g 全都可以匹配 <span class="string">"*"</span>匹配多个或者0个</div></pre></td></tr></table></figure></p>
+<p><strong>8、重复一个或者0个</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var str=<span class="string">"yo"</span></div><div class="line">     str=<span class="string">"yooooo"</span></div><div class="line">     str=<span class="string">"Yoo"</span></div><div class="line">     str=<span class="string">"YOO"</span></div><div class="line">     str=<span class="string">"yo!"</span></div><div class="line">     str=<span class="string">"yo."</span></div><div class="line">     str=<span class="string">"yo~~"</span></div><div class="line">     str=<span class="string">"yop"</span></div><div class="line">     str=<span class="string">"yooP"</span></div><div class="line">/[yY][oO]+[pP]?[!~\.]*/g  <span class="string">"?"</span>重复一个或者0个。</div></pre></td></tr></table></figure></p>
+<p><strong>9、指定重复范围</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var str=<span class="string">"yo"</span>;</div><div class="line">    str=<span class="string">"yooooo"</span>;</div><div class="line">    str=<span class="string">"yoooooooo"</span>;</div><div class="line">/yo&#123;1,4&#125;/g选取1-4的o  &#123;&#125;里面就是区间的范围 </div><div class="line">不想要匹配第三个字符串</div><div class="line">/yo&#123;1,4&#125;\b/ \b只取左边的切面 所以第三个str不选取。</div></pre></td></tr></table></figure></p>
+<p><strong>10、分组匹配</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var text=<span class="string">"李栓但飞飞，王花花追追"</span>;</div><div class="line">/(.+)飞飞,(.+)追追/g</div><div class="line"><span class="variable">$1</span> 就是<span class="string">"李栓但"</span> <span class="variable">$2</span> 就是<span class="string">"王花花"</span>;</div></pre></td></tr></table></figure></p>
+<p><strong>11、分组匹配但不捕获</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">  var str=<span class="string">"13726457894"</span>;</div><div class="line">      str=<span class="string">"13712241000"</span>;</div><div class="line">      str=<span class="string">"18398754000"</span>;</div><div class="line">      str=<span class="string">"13112241000"</span>;</div><div class="line">      str=<span class="string">"17722232000"</span>;</div><div class="line">取前面三个电话号码后面的4位</div><div class="line">/1(?:37|83)\d&#123;4&#125;(\d&#123;4&#125;)/g   ?:就是不捕获  所以<span class="variable">$1</span>  就是7894 1000 4000;</div></pre></td></tr></table></figure></p>
+<p><strong>12、正向预查</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var str=<span class="string">"100元"</span>;</div><div class="line">    str=<span class="string">"1000元"</span>;</div><div class="line">    str=<span class="string">"100刀"</span>;</div><div class="line">    str=<span class="string">"100磅"</span>;</div><div class="line">   /\d+(?=元)/g 选中所有元结尾的数字不包括元  100  1000  ?= 这就是正向预查</div><div class="line">   ?!正向否定预查</div><div class="line">   /\d+(?!元|\d)/g  后面加一个\d就是把前面的匹配的包括进去。（一旦碰到不是元就会匹配到，所以100元会匹配到10）正向否定的范围较大。</div></pre></td></tr></table></figure></p>
+<p><strong>13、反向预查</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">   var str=<span class="string">"￥100"</span>;</div><div class="line">    str=<span class="string">"￥1000"</span>;</div><div class="line">    str=<span class="string">"<span class="variable">$100</span>"</span>;</div><div class="line">    str=<span class="string">"£100"</span>;</div><div class="line">  /(?&lt;=￥)\d+/g  选取所有￥的数额</div><div class="line"> 反向否定预查(?&lt;!)</div><div class="line">/(?&lt;=￥|\d)\d+/g  选取不是￥的数额</div></pre></td></tr></table></figure></p>
+<p><strong>总结</strong><br>大家可以去参考 [^表严肃]:<a href="http://biaoyansu.com" target="_blank" rel="external">http://biaoyansu.com</a></p>
 
       
 
@@ -209,7 +223,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
@@ -265,7 +279,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://qiuzhichao.me/2017/12/26/碎嘴/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://qiuzhichao.me/2018/09/03/正则表达式/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -279,18 +293,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/02/09/懒加载/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          懒加载
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/12/11/一些小方法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">一些小方法</div>
+    <a href="/2018/05/25/VUE九宫格/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">VUE九宫格</div>
       <i class="icon-circle-right"></i>
     </a>
   

@@ -6,19 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://qiuzhichao.me">
-  <title>碎嘴 | Francis</title>
+  <title>Archives: 2018/9 | Francis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近跟后台讨论的一些js的小东西，（后台是PHP）PHP是世界上最好的语言？ 由于他在js里操作数组，于是： 12345678910111213141516concat(): arr1.concat(arr2) //合并数组indexOf(): str.indexOf(&quot;xxx&quot;) //判断元素是否在数组内，找的到返回index，找不到返回-1;sort():arr.sort();arr.sort">
-<meta name="keywords" content="javascript">
-<meta property="og:type" content="article">
-<meta property="og:title" content="碎嘴">
-<meta property="og:url" content="http://qiuzhichao.me/2017/12/26/碎嘴/index.html">
+  <meta name="description" content="Chance favors the prepared mind">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Francis">
+<meta property="og:url" content="http://qiuzhichao.me/archives/2018/09/index.html">
 <meta property="og:site_name" content="Francis">
-<meta property="og:description" content="最近跟后台讨论的一些js的小东西，（后台是PHP）PHP是世界上最好的语言？ 由于他在js里操作数组，于是： 12345678910111213141516concat(): arr1.concat(arr2) //合并数组indexOf(): str.indexOf(&quot;xxx&quot;) //判断元素是否在数组内，找的到返回index，找不到返回-1;sort():arr.sort();arr.sort">
-<meta property="og:updated_time" content="2017-12-26T08:05:22.467Z">
+<meta property="og:description" content="Chance favors the prepared mind">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="碎嘴">
-<meta name="twitter:description" content="最近跟后台讨论的一些js的小东西，（后台是PHP）PHP是世界上最好的语言？ 由于他在js里操作数组，于是： 12345678910111213141516concat(): arr1.concat(arr2) //合并数组indexOf(): str.indexOf(&quot;xxx&quot;) //判断元素是否在数组内，找的到返回index，找不到返回-1;sort():arr.sort();arr.sort">
+<meta name="twitter:title" content="Francis">
+<meta name="twitter:description" content="Chance favors the prepared mind">
   
     <link rel="alternative" href="/atom.xml" title="Francis" type="application/atom+xml">
   
@@ -150,180 +148,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-碎嘴" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      碎嘴
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/09/03/正则表达式/" class="archive-article-date">
+  	<time datetime="2018-09-03T07:02:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-03</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/09/03/正则表达式/">正则表达式</a>
     </h1>
   
 
-        
-        <a href="/2017/12/26/碎嘴/" class="archive-article-date">
-  	<time datetime="2017-12-26T07:26:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近跟后台讨论的一些js的小东西，（后台是PHP）PHP是世界上最好的语言？</p>
-<p>由于他在js里操作数组，于是：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">concat(): arr1.concat(arr2) //合并数组</div><div class="line">indexOf(): str.indexOf(<span class="string">"xxx"</span>) //判断元素是否在数组内，找的到返回index，找不到返回-1;</div><div class="line">sort():arr.sort();arr.sort(<span class="keyword">function</span>)//数组排序;</div><div class="line">push():arr.push(<span class="string">"xxx"</span>)//在数组末尾加一个或多个元素;</div><div class="line">slice():该方法不会修改数组，而是返回一个子数组</div><div class="line">splice():该方法可删除从index处开始的0个会多个元素，并且用参数列表中声明的一个或多个值来替换那些被删除的元素。</div><div class="line">		<span class="built_in">return</span>出来的是含有被删除元素的数组！！</div><div class="line">		var arr2=new Array(4);</div><div class="line">		arr2[0]=<span class="string">"jani"</span></div><div class="line">		arr2[1]=<span class="string">"hege"</span></div><div class="line">		arr2[2]=<span class="string">"stale"</span></div><div class="line">		arr2[3]=<span class="string">"kai jim"</span></div><div class="line">		arr2[4]=<span class="string">"borge"</span>;</div><div class="line">		console.log(arr2);</div><div class="line">		console.log(arr2.slice(0));//[<span class="string">"jani"</span>,<span class="string">"hege"</span>,<span class="string">"stale"</span>,<span class="string">"kai jim"</span>,<span class="string">"borge"</span>]</div><div class="line">		console.log(arr2.splice(1,1));//[<span class="string">"hege"</span>]</div></pre></td></tr></table></figure>
-<p><strong>disable</strong>只对表单元素(button)有效果<br><a id="more"></a><br><strong>BUG:</strong><br>在此之间写了个登录页面用到了border-radius这个属性，页面出来后在苹果机、华为机都没有出现啥异常！但是在chrome和小米手机自带的浏览器上输入框点击后会浮现圆角之前直角框(黄色)<br><strong>解决:</strong><br>在input的css里写上outline:none;</p>
-<p><strong>a标签</strong>上附加了onclic事件，当某种情况下取消点击事件(上面讲的disable一开始想在这里了):removeAttr(“onclick”);</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>心有猛虎，细嗅蔷薇<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://qiuzhichao.me/2017/12/26/碎嘴/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/02/09/懒加载/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          懒加载
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/12/11/一些小方法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">一些小方法</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -346,8 +224,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
