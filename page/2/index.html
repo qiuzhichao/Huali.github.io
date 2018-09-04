@@ -150,6 +150,86 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-解决jquery中动态新增的元素节点无法触发事件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/27/解决jquery中动态新增的元素节点无法触发事件/">解决jquery中动态新增的元素节点无法触发事件</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/27/解决jquery中动态新增的元素节点无法触发事件/" class="archive-article-date">
+  	<time datetime="2017-10-27T05:51:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="解决jquery中动态新增的元素节点无法触发事件问题的两种方法"><a href="#解决jquery中动态新增的元素节点无法触发事件问题的两种方法" class="headerlink" title="解决jquery中动态新增的元素节点无法触发事件问题的两种方法"></a>解决jquery中动态新增的元素节点无法触发事件问题的两种方法</h2><p>日常的一些小问题、方法，积累起来！<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"body"</span>).append(<span class="string">'&lt;button class="btn"&gt;点击&lt;/button&gt;'</span>);</div><div class="line">//</div><div class="line">$(<span class="string">'.btn'</span>).on(<span class="string">'click'</span>,<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">	console.log(123)</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>你会发现上面绑定的事件不起作用，下面来提到两个解决办法：</p>
+<p><strong>1、</strong>使用live</p>
+<hr>
+<p>live()函数会给备选的元素绑定上一个或者多个事件处理程序，并规定当这些事件发生事件运行的函数。通过live()函数适用于匹配选择器的当前以及未来的元素。比如，哦通过脚本创建的元素。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'.btn'</span>).live(<span class="string">'click'</span>,<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">	console.log(123)</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+        
+          <a class="article-more-a" href="/2017/10/27/解决jquery中动态新增的元素节点无法触发事件/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JQ</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/27/解决jquery中动态新增的元素节点无法触发事件/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-AJAX" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -566,15 +646,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JQ</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -582,7 +658,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color3">JQ</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
             
             <div class="clearfix"></div>

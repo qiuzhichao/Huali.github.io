@@ -150,6 +150,83 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-webpack" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/04/webpack/">webpack</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/04/webpack/" class="archive-article-date">
+  	<time datetime="2018-09-04T08:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="做个理解WEBPACK"><a href="#做个理解WEBPACK" class="headerlink" title="做个理解WEBPACK"></a>做个理解WEBPACK</h2><p><strong>背景：</strong><br>我觉得： webpack就是帮助浏览器理解你代码里写的node语法。<br>浏览器解析js文件时不能模块化，一个文件要暴露给另一个文件一个变量或者数据 ，那只能定义在全局作用下。这样会显得很局限性。毕竟所有代码不可能是一个人完成，或者说你可能引入的插件可能会覆盖你定义的全局变量，所以显得很漏洞。</p>
+<p><strong>初步实现文件之间互通：</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"> //比如有两个js文件  js/a.js   js/b.js</div><div class="line"> //在 a.js中要获取b.js中的 flag这个变量</div><div class="line"></div><div class="line"> //首先在b.js中这样写</div><div class="line"> //node写法</div><div class="line"> var flag=<span class="literal">true</span>;</div><div class="line">     module exports=&#123;flag:flag&#125;;</div><div class="line">//这里也可以用es6的写法</div><div class="line">  var flag=<span class="literal">true</span>;</div><div class="line">     <span class="built_in">export</span>=&#123;flag&#125;;  </div><div class="line">//在这里就是暴露b文件当中的 flag这个属性</div><div class="line"></div><div class="line">//在a.js中我们就可以调用flag这个属性了</div><div class="line">//node写法</div><div class="line"> var flag =require(<span class="string">"./b"</span>).flag;</div><div class="line"> //es6写法</div><div class="line"> import &#123;flag&#125; from <span class="string">"./b"</span></div><div class="line">     <span class="keyword">if</span>(flag)&#123;</div><div class="line">         document.body.innerHTML=<span class="string">"&lt;div&gt; i got flag！！！&lt;/div&gt;"</span>;</div><div class="line">     &#125;</div><div class="line">//当然这些还是的在node上跑，浏览器上现在还是跑不通。所以我们下面就要安装webpack来帮助我们！！！</div></pre></td></tr></table></figure></p>
+        
+          <a class="article-more-a" href="/2018/09/04/webpack/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/04/webpack/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-正则表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -864,86 +941,6 @@
 
 
   
-    <article id="post-解决jquery中动态新增的元素节点无法触发事件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/27/解决jquery中动态新增的元素节点无法触发事件/">解决jquery中动态新增的元素节点无法触发事件</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/27/解决jquery中动态新增的元素节点无法触发事件/" class="archive-article-date">
-  	<time datetime="2017-10-27T05:51:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="解决jquery中动态新增的元素节点无法触发事件问题的两种方法"><a href="#解决jquery中动态新增的元素节点无法触发事件问题的两种方法" class="headerlink" title="解决jquery中动态新增的元素节点无法触发事件问题的两种方法"></a>解决jquery中动态新增的元素节点无法触发事件问题的两种方法</h2><p>日常的一些小问题、方法，积累起来！<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"body"</span>).append(<span class="string">'&lt;button class="btn"&gt;点击&lt;/button&gt;'</span>);</div><div class="line">//</div><div class="line">$(<span class="string">'.btn'</span>).on(<span class="string">'click'</span>,<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">	console.log(123)</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
-<p>你会发现上面绑定的事件不起作用，下面来提到两个解决办法：</p>
-<p><strong>1、</strong>使用live</p>
-<hr>
-<p>live()函数会给备选的元素绑定上一个或者多个事件处理程序，并规定当这些事件发生事件运行的函数。通过live()函数适用于匹配选择器的当前以及未来的元素。比如，哦通过脚本创建的元素。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'.btn'</span>).live(<span class="string">'click'</span>,<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">	console.log(123)</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2017/10/27/解决jquery中动态新增的元素节点无法触发事件/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JQ</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/27/解决jquery中动态新增的元素节点无法触发事件/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1041,15 +1038,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JQ</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1057,7 +1050,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color3">JQ</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
             
             <div class="clearfix"></div>
