@@ -150,6 +150,84 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-常见的基础问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/11/常见的基础问题/">常见的基础问题</a>
+    </h1>
+  
+
+        
+        <a href="/2018/10/11/常见的基础问题/" class="archive-article-date">
+  	<time datetime="2018-10-11T07:15:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="十月"><a href="#十月" class="headerlink" title="十月"></a>十月</h2><p><strong>问题1：Scope作用范围</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">	var a=b=5;</div><div class="line">&#125;)()</div><div class="line">console.log(b)</div></pre></td></tr></table></figure></p>
+<p><strong>回答：</strong><br>上面的代码会打印5。<br>这里有两个变量声明，但a使用关键字var声明的。代表它是一个函数的局部变量。与此相反b变成了全局变量。<br>这个问题还有另一个诀窍是，他没有使用严格模式（’use strict’）。如果启用了严格模式，代码就会引发ReferenceError的错误：b没有定义（b is not defined）。</p>
+<p><strong>严格模式：</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">	<span class="string">'use strict'</span></div><div class="line">	var a=window.b=5;</div><div class="line">&#125;)()</div><div class="line">console.log(b)</div></pre></td></tr></table></figure></p>
+        
+          <a class="article-more-a" href="/2018/10/11/常见的基础问题/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/11/常见的基础问题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-webpack" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -864,83 +942,6 @@
 
 
   
-    <article id="post-关于layer" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/24/关于layer/">关于layer</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/24/关于layer/" class="archive-article-date">
-  	<time datetime="2017-11-24T08:15:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天初次使用layer，Layer For Mobile(这里我就踩了一个坑，下面说！)，在给网站做优化的时候突然发现我们登录页面没有Loading的页面，由于之前的前端就是用的layer，所以就来了解了下layer！</p>
-<h3 id="第一个坑"><a href="#第一个坑" class="headerlink" title="第一个坑"></a>第一个坑</h3><p>看了官网介绍，layer确实是通俗易懂，功能强大，一时大喜！随手就加入个layer.load(),就easy啦，Boom报错了！layer.load is not a function, W T F..官网都出错了？试了各种 layer.msg()  layer.alert(),统统都是not a function。这就很尴尬了，后面经人指点了下官网是没有错的，错的是我！<br><img src="http://otdpf38ea.bkt.clouddn.com/layer.png"><br>结果就是我乖乖跟着官网来啦！<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var ii=layer.open(&#123;</div><div class="line">    	<span class="built_in">type</span>:2</div><div class="line"> &#125;);</div></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2017/11/24/关于layer/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/24/关于layer/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1038,11 +1039,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1050,11 +1051,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JQ</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">JQ</a>
               </li>
             
             <div class="clearfix"></div>

@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://qiuzhichao.me">
-  <title>Francis</title>
+  <title>常见的基础问题 | Francis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Chance favors the prepared mind">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Francis">
-<meta property="og:url" content="http://qiuzhichao.me/page/2/index.html">
+  <meta name="description" content="十月问题1：Scope作用范围1234(function()&amp;#123;	var a=b=5;&amp;#125;)()console.log(b) 回答：上面的代码会打印5。这里有两个变量声明，但a使用关键字var声明的。代表它是一个函数的局部变量。与此相反b变成了全局变量。这个问题还有另一个诀窍是，他没有使用严格模式（’use strict’）。如果启用了严格模式，代码就会引发ReferenceErr">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常见的基础问题">
+<meta property="og:url" content="http://qiuzhichao.me/2018/10/11/常见的基础问题/index.html">
 <meta property="og:site_name" content="Francis">
-<meta property="og:description" content="Chance favors the prepared mind">
+<meta property="og:description" content="十月问题1：Scope作用范围1234(function()&amp;#123;	var a=b=5;&amp;#125;)()console.log(b) 回答：上面的代码会打印5。这里有两个变量声明，但a使用关键字var声明的。代表它是一个函数的局部变量。与此相反b变成了全局变量。这个问题还有另一个诀窍是，他没有使用严格模式（’use strict’）。如果启用了严格模式，代码就会引发ReferenceErr">
+<meta property="og:updated_time" content="2018-10-11T07:54:42.141Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Francis">
-<meta name="twitter:description" content="Chance favors the prepared mind">
+<meta name="twitter:title" content="常见的基础问题">
+<meta name="twitter:description" content="十月问题1：Scope作用范围1234(function()&amp;#123;	var a=b=5;&amp;#125;)()console.log(b) 回答：上面的代码会打印5。这里有两个变量声明，但a使用关键字var声明的。代表它是一个函数的局部变量。与此相反b变成了全局变量。这个问题还有另一个诀窍是，他没有使用严格模式（’use strict’）。如果启用了严格模式，代码就会引发ReferenceErr">
   
     <link rel="alternative" href="/atom.xml" title="Francis" type="application/atom+xml">
   
@@ -148,35 +150,65 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-关于layer" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-常见的基础问题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/24/关于layer/">关于layer</a>
+    <h1 class="article-title" itemprop="name">
+      常见的基础问题
     </h1>
   
 
         
-        <a href="/2017/11/24/关于layer/" class="archive-article-date">
-  	<time datetime="2017-11-24T08:15:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-24</time>
+        <a href="/2018/10/11/常见的基础问题/" class="archive-article-date">
+  	<time datetime="2018-10-11T07:15:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天初次使用layer，Layer For Mobile(这里我就踩了一个坑，下面说！)，在给网站做优化的时候突然发现我们登录页面没有Loading的页面，由于之前的前端就是用的layer，所以就来了解了下layer！</p>
-<h3 id="第一个坑"><a href="#第一个坑" class="headerlink" title="第一个坑"></a>第一个坑</h3><p>看了官网介绍，layer确实是通俗易懂，功能强大，一时大喜！随手就加入个layer.load(),就easy啦，Boom报错了！layer.load is not a function, W T F..官网都出错了？试了各种 layer.msg()  layer.alert(),统统都是not a function。这就很尴尬了，后面经人指点了下官网是没有错的，错的是我！<br><img src="http://otdpf38ea.bkt.clouddn.com/layer.png"><br>结果就是我乖乖跟着官网来啦！<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var ii=layer.open(&#123;</div><div class="line">    	<span class="built_in">type</span>:2</div><div class="line"> &#125;);</div></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2017/11/24/关于layer/#more">more >></a>
-        
+        <h2 id="十月"><a href="#十月" class="headerlink" title="十月"></a>十月</h2><p><strong>问题1：Scope作用范围</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">	var a=b=5;</div><div class="line">&#125;)()</div><div class="line">console.log(b)</div></pre></td></tr></table></figure></p>
+<p><strong>回答：</strong><br>上面的代码会打印5。<br>这里有两个变量声明，但a使用关键字var声明的。代表它是一个函数的局部变量。与此相反b变成了全局变量。<br>这个问题还有另一个诀窍是，他没有使用严格模式（’use strict’）。如果启用了严格模式，代码就会引发ReferenceError的错误：b没有定义（b is not defined）。</p>
+<p><strong>严格模式：</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">	<span class="string">'use strict'</span></div><div class="line">	var a=window.b=5;</div><div class="line">&#125;)()</div><div class="line">console.log(b)</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p><strong>声明提升(Hoisting)</strong><br>执行下面代码，输出什么结果：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">test</span></span>()&#123;</div><div class="line">	console.log(a);</div><div class="line">	console.log(foo());</div><div class="line">	var a=1;</div><div class="line">	<span class="keyword">function</span> <span class="function"><span class="title">foo</span></span>()&#123;</div><div class="line">		<span class="built_in">return</span> 2</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">test</span>()</div></pre></td></tr></table></figure>
+<p><strong>回答：</strong><br>这段代码的结果是 undefined and 2;<br>原因是，变量和函数的声明都被提前了，但变量不分配任何值，因此，在打印变量的时候，他在函数中存在（被声明），但它仍然是undefined。上面的代码=同于下面这段代码：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">test</span></span>()&#123;</div><div class="line">	var a;</div><div class="line">	<span class="keyword">function</span> <span class="function"><span class="title">foo</span></span>()&#123;</div><div class="line">		<span class="built_in">return</span> 2;</div><div class="line">	&#125;</div><div class="line">	console.log(a);</div><div class="line">	console.log(foo());</div><div class="line"></div><div class="line">	a=1;</div><div class="line">&#125;</div><div class="line"><span class="built_in">test</span>();</div></pre></td></tr></table></figure></p>
+<p><strong>this在Javascript中如何工作的：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">var fulllname=<span class="string">"John"</span>;</div><div class="line">var obj=&#123;</div><div class="line">	fulllname:<span class="string">'colin'</span>,</div><div class="line">	prop:&#123;</div><div class="line">		fulllname:<span class="string">'Rosa'</span>,</div><div class="line">		getFullname:<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">			<span class="built_in">return</span> this.fulllname;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">console.log(obj.prop.getFullname());</div><div class="line"></div><div class="line">var <span class="built_in">test</span>=oj.prop.getFullname;</div><div class="line">console.log(<span class="built_in">test</span>())</div></pre></td></tr></table></figure>
+<p><strong>回答：</strong><br>Rosa and John<br>因为，在一个函数中，this的行为，取决于Javascript函数的调用方式和定义方式，而不是仅仅看它如何被定义的。</p>
+<p>在第一个console调用中，getFullname()被调用作为obj.prop对象的函数。所以，上下文指的是后者，函数返回该对象的fullname。与此相反，当getFullname()被分配到test变量时，上下文指的是全局对象(window)。这里test被隐式设置为全局对象的属性。出于这个原因，该函数返回window的fullname，即定义在第一行的那个值。</p>
+<p><strong>如何让上文中的第二个console也打印Rosa（call and apply）</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">console.log(test.call(obj.prop))</div></pre></td></tr></table></figure>
+<p>call:调用一个对象的一个方法，用另一个对象替换当前对象。例如：test.call(a,args1,args2);<br>apply:调用一个对象的一个方法，用另一个对象替换当前对象。例如：test.call(a,args);</p>
+<p>它们共同之处：<br>都可以用来代替另一个对象调用一个方法，将一个函数的对象上下文从初始的对象改变为由a替换的新对象。即上文的obj.prop。</p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>心有猛虎，细嗅蔷薇<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -196,16 +228,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/24/关于layer/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://qiuzhichao.me/2018/10/11/常见的基础问题/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/09/04/webpack/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">webpack</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -225,411 +316,14 @@
 
 
 
-
-  
-    <article id="post-解决jquery中动态新增的元素节点无法触发事件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/27/解决jquery中动态新增的元素节点无法触发事件/">解决jquery中动态新增的元素节点无法触发事件</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/27/解决jquery中动态新增的元素节点无法触发事件/" class="archive-article-date">
-  	<time datetime="2017-10-27T05:51:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="解决jquery中动态新增的元素节点无法触发事件问题的两种方法"><a href="#解决jquery中动态新增的元素节点无法触发事件问题的两种方法" class="headerlink" title="解决jquery中动态新增的元素节点无法触发事件问题的两种方法"></a>解决jquery中动态新增的元素节点无法触发事件问题的两种方法</h2><p>日常的一些小问题、方法，积累起来！<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"body"</span>).append(<span class="string">'&lt;button class="btn"&gt;点击&lt;/button&gt;'</span>);</div><div class="line">//</div><div class="line">$(<span class="string">'.btn'</span>).on(<span class="string">'click'</span>,<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">	console.log(123)</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
-<p>你会发现上面绑定的事件不起作用，下面来提到两个解决办法：</p>
-<p><strong>1、</strong>使用live</p>
-<hr>
-<p>live()函数会给备选的元素绑定上一个或者多个事件处理程序，并规定当这些事件发生事件运行的函数。通过live()函数适用于匹配选择器的当前以及未来的元素。比如，哦通过脚本创建的元素。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'.btn'</span>).live(<span class="string">'click'</span>,<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">	console.log(123)</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2017/10/27/解决jquery中动态新增的元素节点无法触发事件/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JQ</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/27/解决jquery中动态新增的元素节点无法触发事件/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-AJAX" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/25/AJAX/">AJAX</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/25/AJAX/" class="archive-article-date">
-  	<time datetime="2017-10-25T03:01:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="封装AJAX"><a href="#封装AJAX" class="headerlink" title="封装AJAX"></a>封装AJAX</h2><p>AJAX即”Asynchronous Javascript And XML”(异步JavaScript和XML)，是指一种创建交互式网页应用的网页开发技术。是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。通过在后台与服务器进行少量数据交换，AJAX可以使网页实现异步更新！</p>
-<h3 id="参考网上资料结合自己实践"><a href="#参考网上资料结合自己实践" class="headerlink" title="参考网上资料结合自己实践"></a>参考网上资料结合自己实践</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> Ajax(<span class="built_in">type</span>,url,data,success,faild)&#123;</div><div class="line">	//创建对象</div><div class="line">	var xhr=null;</div><div class="line">	<span class="keyword">if</span>(window.XMLHttpRequest)&#123;</div><div class="line">	   xhr=new XMLHttpRequest()</div><div class="line">	&#125;<span class="keyword">else</span>&#123;</div><div class="line">		//兼容IE6</div><div class="line">		xhr=new ActiveXobject(<span class="string">'Microsoft.XMLHTTP'</span>)</div><div class="line">	&#125;</div><div class="line">	var <span class="built_in">type</span>=type.toUpperCase();</div><div class="line">	//用于清缓存</div><div class="line">	var random=Math.random();</div><div class="line">	<span class="keyword">if</span>(typeof data==<span class="string">'object'</span>)&#123;</div><div class="line">		var str=<span class="string">''</span>;</div><div class="line">		<span class="keyword">for</span>(key <span class="keyword">in</span> data)&#123;</div><div class="line">			str+=key+<span class="string">"="</span>data[key]+<span class="string">"&amp;"</span></div><div class="line">		&#125;</div><div class="line">		data=str.replace(/&amp;$/,<span class="string">''</span>)</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span>(<span class="built_in">type</span>==<span class="string">"GET"</span>)&#123;</div><div class="line">		<span class="keyword">if</span>(data)&#123;</div><div class="line">			xhr.open(<span class="string">'GET'</span>,url+<span class="string">"?"</span>+data,<span class="literal">true</span>);</div><div class="line">		&#125;<span class="keyword">else</span>&#123;</div><div class="line">			xhr.open(<span class="string">'GET'</span>,url+<span class="string">"?t="</span>+random,<span class="literal">true</span>);</div><div class="line">		&#125;</div><div class="line">		xhr.send()</div><div class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">type</span>==<span class="string">"POST"</span>)&#123;</div><div class="line">		xhr.open(<span class="string">'POST'</span>,url)</div><div class="line">		//如果需要向HTML表单那样POST数据请使用setRequestHeader()来添加http头。</div><div class="line">		xhr.setRequestHeader(<span class="string">"Content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>);</div><div class="line">		xhr.send(data);</div><div class="line">	&#125;</div><div class="line">	//处理返回数据</div><div class="line">	xhr.onreadystatechange=<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">		<span class="keyword">if</span>(xhr.readyState==4)&#123;</div><div class="line">			<span class="keyword">if</span>(xhr.status==200)&#123;</div><div class="line">				success(xhr.responseText);</div><div class="line">			&#125;<span class="keyword">else</span>&#123;</div><div class="line">				<span class="keyword">if</span>(failed)&#123;</div><div class="line">					failed(xhr.status)</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/10/25/AJAX/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/25/AJAX/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-定时器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/20/定时器/">定时器</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/20/定时器/" class="archive-article-date">
-  	<time datetime="2017-10-20T07:17:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="遇到的关于定时器的问题，记录一下！！"><a href="#遇到的关于定时器的问题，记录一下！！" class="headerlink" title="遇到的关于定时器的问题，记录一下！！"></a>遇到的关于定时器的问题，记录一下！！</h2><p>公司做双十一团购活动，被一个循环定时器给憋住了！</p>
-<hr>
-<p><strong>1、</strong><br>说一说问题是啥！<br> <img src="http://otdpf38ea.bkt.clouddn.com/team.png"><br>如上图所见：如果有很多个团就得有很多个定时器，每个倒计时时间是不一样，结束时间也就是不一样了；所以定时器的循环出来，数据咋传，咋展示就是问题了！</p>
-<p><strong>方法：</strong></p>
-<h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML:"></a>HTML:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;ul&gt;</div><div class="line">	&lt;li data-time=<span class="string">"10000"</span>&gt;&lt;/li&gt;</div><div class="line">	&lt;li data-time=<span class="string">"5000"</span>&gt;&lt;/li&gt;</div><div class="line">	&lt;li data-time=<span class="string">"20000"</span>&gt;&lt;/li&gt;</div><div class="line">	...</div><div class="line">&lt;/ul&gt;</div></pre></td></tr></table></figure>
-<p>上面的data-time是后台传输的时间戳！！</p>
-<h3 id="JS："><a href="#JS：" class="headerlink" title="JS："></a>JS：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">	<span class="keyword">function</span> zero(e)&#123;</div><div class="line">	<span class="built_in">return</span> e&lt;10?<span class="string">"0"</span>+e:e;</div><div class="line">&#125;</div><div class="line">	先写好定时器方法:</div><div class="line"></div><div class="line">	<span class="keyword">function</span> countDown(endtime,fn)&#123;</div><div class="line">		var o=endtime/1000;</div><div class="line">		var timer=setInterval(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">			var D=parseInt(o/(24*60*60)),</div><div class="line">				H=parseInt(o/(60*60)%24),</div><div class="line">				M=parseInt(o/60%60),</div><div class="line">				S=parseInt(o%60);</div><div class="line">				<span class="keyword">if</span>(o&gt;=0)&#123;</div><div class="line">					var msg=<span class="string">"距离结束还有："</span>+zero(D)+<span class="string">"天："</span>+zero(H)+<span class="string">"小时："</span>+zero(M)+<span class="string">"分钟："</span>+zero(S)+<span class="string">"秒"</span>;</div><div class="line">					fn(msg);</div><div class="line">					o--;</div><div class="line">				&#125;<span class="keyword">else</span>&#123;</div><div class="line">					clearsetInterval(timer);</div><div class="line">					fn(<span class="string">"Time Over"</span>);</div><div class="line">				&#125;</div><div class="line">			&#125;,1000)</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/10/20/定时器/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/20/定时器/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-九月" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/13/九月/">九月</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/13/九月/" class="archive-article-date">
-  	<time datetime="2017-09-13T05:47:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="九月是我最喜欢的一个月份，September！"><a href="#九月是我最喜欢的一个月份，September！" class="headerlink" title="九月是我最喜欢的一个月份，September！"></a>九月是我最喜欢的一个月份，September！</h2><p>九月，与人的心境很契合，湛蓝的天空飘着几朵棉花云，微风徐来，回首那一抹嫣然！<br>而我也是九月人生。</p>
-<hr>
-<p>八月里，公司事情也不多，一直对于Vue很向往，后面就自己着手折腾了！自己写了一个<a href="https://github.com/qiuzhichao/vue-" target="_blank" rel="external">VueDemo</a><br>不完善之处，尽情谅解！慢慢加油中….</p>
-        
-          <a class="article-more-a" href="/2017/09/13/九月/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/13/九月/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-折腾记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/01/折腾记/">折腾记</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/01/折腾记/" class="archive-article-date">
-  	<time datetime="2017-08-01T03:45:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="抓住了7月的尾巴，撵上了8月的前奏"><a href="#抓住了7月的尾巴，撵上了8月的前奏" class="headerlink" title="抓住了7月的尾巴，撵上了8月的前奏"></a>抓住了7月的尾巴，撵上了8月的前奏</h2><p>七月来的那一天，我住的地方停电折腾了一宿没睡，八月来的前奏，我办公电脑丢失！七月份的祈祷看样子是没用的！<br>悲催的写的blog source文件夹都没有备份的！也就意味着我之前那写的blog全部没了！</p>
-<p>那就写一下在新电脑上重新写blog吧没有之前那么多功能了一些小玩意不需要了（评论 统计）记录一下心情就好了！</p>
-<hr>
-<p><strong>1</strong>，首先我们要与github建立联系，为了在本地使用git管理github上的项目，需要进行一些配置，下面介绍SSH的方法<br><strong>1.1</strong> 检查电脑是否已经有了SSH keys。</p>
-<hr>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ ls -al ~/.ssh</div><div class="line"><span class="comment"># Lists the files in your .ssh directory, if they exist</span></div></pre></td></tr></table></figure>
-<p>默认情况下，public keys的文件名是以下的格式之一：id_dsa.pub、id_ecdsa.pub、id_ed25519.pub、id_rsa.pub。因此，如果列出的文件有public和private钥匙对（例如id_ras.pub和id_rsa），证明已存在SSH keys。<br>
-        
-          <a class="article-more-a" href="/2017/08/01/折腾记/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/01/折腾记/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -652,8 +346,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
