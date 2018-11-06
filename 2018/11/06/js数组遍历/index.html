@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://qiuzhichao.me">
-  <title>Archives: 2017/9 | Francis</title>
+  <title>js数组遍历 | Francis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Chance favors the prepared mind">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Francis">
-<meta property="og:url" content="http://qiuzhichao.me/archives/2017/09/index.html">
+  <meta name="description" content="js中的数组遍历js中的数组遍历是项目中经常用到的，在这里将几种方法做个比对。 1、for循环12345let arr=[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;];for(let i=0;i&amp;lt;arr.length;i++)&amp;#123;	   console.log(i);//1,2,3	   console.log(arr[i]);//a,b,c,d&amp;#125; 2、forEach()循环12345">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js数组遍历">
+<meta property="og:url" content="http://qiuzhichao.me/2018/11/06/js数组遍历/index.html">
 <meta property="og:site_name" content="Francis">
-<meta property="og:description" content="Chance favors the prepared mind">
+<meta property="og:description" content="js中的数组遍历js中的数组遍历是项目中经常用到的，在这里将几种方法做个比对。 1、for循环12345let arr=[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;];for(let i=0;i&amp;lt;arr.length;i++)&amp;#123;	   console.log(i);//1,2,3	   console.log(arr[i]);//a,b,c,d&amp;#125; 2、forEach()循环12345">
+<meta property="og:updated_time" content="2018-11-06T07:47:47.005Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Francis">
-<meta name="twitter:description" content="Chance favors the prepared mind">
+<meta name="twitter:title" content="js数组遍历">
+<meta name="twitter:description" content="js中的数组遍历js中的数组遍历是项目中经常用到的，在这里将几种方法做个比对。 1、for循环12345let arr=[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;];for(let i=0;i&amp;lt;arr.length;i++)&amp;#123;	   console.log(i);//1,2,3	   console.log(arr[i]);//a,b,c,d&amp;#125; 2、forEach()循环12345">
   
     <link rel="alternative" href="/atom.xml" title="Francis" type="application/atom+xml">
   
@@ -148,60 +150,173 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-js数组遍历" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/13/九月/" class="archive-article-date">
-  	<time datetime="2017-09-13T05:47:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-13</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/13/九月/">九月</a>
+    <h1 class="article-title" itemprop="name">
+      js数组遍历
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/11/06/js数组遍历/" class="archive-article-date">
+  	<time datetime="2018-11-06T06:45:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="js中的数组遍历"><a href="#js中的数组遍历" class="headerlink" title="js中的数组遍历"></a>js中的数组遍历</h2><p>js中的数组遍历是项目中经常用到的，在这里将几种方法做个比对。</p>
+<p><strong>1、for循环</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">let</span> arr=[<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>,<span class="string">"d"</span>];</div><div class="line"><span class="keyword">for</span>(<span class="built_in">let</span> i=0;i&lt;arr.length;i++)&#123;</div><div class="line">	   console.log(i);//1,2,3</div><div class="line">	   console.log(arr[i]);//a,b,c,d</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>2、forEach()循环</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">let</span> arr=[<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>,<span class="string">"d"</span>]</div><div class="line">arr.forEach((item,index,arr)=&gt;&#123;</div><div class="line">	console.log(item);//a,b,c,d;第一个参数为数组元素</div><div class="line">	console.log(index);//0,1,2,3;第二个参数为数组元素索引值</div><div class="line">	console.log(arr);//[<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>,<span class="string">"d"</span>];数组本身</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p><strong>3、map循环</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var arr=[</div><div class="line">	&#123;name:<span class="string">'a'</span>,age:15&#125;,</div><div class="line">	&#123;name:<span class="string">'b'</span>,age:18&#125;,</div><div class="line">	&#123;name:<span class="string">'c'</span>,age:80&#125;</div><div class="line">];</div><div class="line">arr.map((item,index,arr)=&gt;&#123;</div><div class="line">	console.log(item.name);//a,b,c;</div><div class="line">	<span class="keyword">if</span>(item.name=<span class="string">"b"</span>)&#123;</div><div class="line">		console.log(index);//2;元素索引</div><div class="line">	&#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p><strong>4、for…in</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">let</span> obj=&#123;</div><div class="line">	name:<span class="string">'francis'</span>,</div><div class="line">	age:25,</div><div class="line">	qq:728358033</div><div class="line">&#125;</div><div class="line"><span class="keyword">for</span> (var key <span class="keyword">in</span> obj)&#123;</div><div class="line">	console.log(key);//name,age,qq</div><div class="line">	console.log(obj[key]);//francis,25,729358033;</div><div class="line">&#125;</div><div class="line"><span class="built_in">let</span> arr=[<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>,<span class="string">"d"</span>];</div><div class="line"><span class="keyword">for</span> (var key <span class="keyword">in</span> arr)&#123;</div><div class="line">	console.log(key);//0,1,2,3;返回数组索引</div><div class="line">	console.log(arr[key]);//a,b,c,d;</div><div class="line">&#125;</div><div class="line"><span class="keyword">for</span> ...<span class="keyword">in</span> 可用于循环数组和对象，推荐用于循环对象，可以用来遍历json</div></pre></td></tr></table></figure></p>
+<p><strong>5、for…of</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> ... of:可循环数组和对象，推荐用于遍历数组；</div><div class="line">for...of提供了三个方法：</div><div class="line">		key()是对键值名的遍历；value()是对键值的遍历；entries()是对键值对的遍历；</div><div class="line"><span class="built_in">let</span> arr=[<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>,<span class="string">"d"</span>];</div><div class="line"><span class="keyword">for</span>(<span class="built_in">let</span> item of arr)&#123;</div><div class="line">	console.log(item);//a,b,c,d</div><div class="line">&#125;</div><div class="line">//key();</div><div class="line"><span class="keyword">for</span>(<span class="built_in">let</span> item of arr.keys())&#123;</div><div class="line">	console.log(item);//0,1,2,3</div><div class="line">&#125;</div><div class="line">//entries()</div><div class="line"><span class="keyword">for</span>(<span class="built_in">let</span> [item,val] of arr.entries())&#123;</div><div class="line">	console.log(item+<span class="string">":"</span>+val);//0:a,1:b,2:c,3:d</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>心有猛虎，细嗅蔷薇<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://qiuzhichao.me/2018/11/06/js数组遍历/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/10/26/小程序/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">小程序</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -224,8 +339,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

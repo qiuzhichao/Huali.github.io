@@ -150,6 +150,164 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-js数组遍历" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/06/js数组遍历/">js数组遍历</a>
+    </h1>
+  
+
+        
+        <a href="/2018/11/06/js数组遍历/" class="archive-article-date">
+  	<time datetime="2018-11-06T06:45:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="js中的数组遍历"><a href="#js中的数组遍历" class="headerlink" title="js中的数组遍历"></a>js中的数组遍历</h2><p>js中的数组遍历是项目中经常用到的，在这里将几种方法做个比对。</p>
+<p><strong>1、for循环</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">let</span> arr=[<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>,<span class="string">"d"</span>];</div><div class="line"><span class="keyword">for</span>(<span class="built_in">let</span> i=0;i&lt;arr.length;i++)&#123;</div><div class="line">	   console.log(i);//1,2,3</div><div class="line">	   console.log(arr[i]);//a,b,c,d</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>2、forEach()循环</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">let</span> arr=[<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>,<span class="string">"d"</span>]</div><div class="line">arr.forEach((item,index,arr)=&gt;&#123;</div><div class="line">	console.log(item);//a,b,c,d;第一个参数为数组元素</div><div class="line">	console.log(index);//0,1,2,3;第二个参数为数组元素索引值</div><div class="line">	console.log(arr);//[<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>,<span class="string">"d"</span>];数组本身</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p><strong>3、map循环</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var arr=[</div><div class="line">	&#123;name:<span class="string">'a'</span>,age:15&#125;,</div><div class="line">	&#123;name:<span class="string">'b'</span>,age:18&#125;,</div><div class="line">	&#123;name:<span class="string">'c'</span>,age:80&#125;</div><div class="line">];</div><div class="line">arr.map((item,index,arr)=&gt;&#123;</div><div class="line">	console.log(item.name);//a,b,c;</div><div class="line">	<span class="keyword">if</span>(item.name=<span class="string">"b"</span>)&#123;</div><div class="line">		console.log(index);//2;元素索引</div><div class="line">	&#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+        
+          <a class="article-more-a" href="/2018/11/06/js数组遍历/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/11/06/js数组遍历/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-小程序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/26/小程序/">小程序</a>
+    </h1>
+  
+
+        
+        <a href="/2018/10/26/小程序/" class="archive-article-date">
+  	<time datetime="2018-10-26T07:57:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="简易小程序demo"><a href="#简易小程序demo" class="headerlink" title="简易小程序demo"></a>简易小程序demo</h2><p>小程序的火爆，不由赘述了，周边的人都在弄小程序。公司也有做小程序的计划，无奈，方案，什么的都没有定下来。这里是源码<a href="https://github.com/qiuzhichao/small-routine-demo" target="_blank" rel="external">地址</a>。做的比较糙，只是些简单的页面交互，渲染而已，涉及的核心知识不多。结合多方面做点小总结。</p>
+<p><strong>1、关于小程序页面路由跳转</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">wx.navigateTo保留当前页面，跳转到应用内的某个页面。但是不能跳到tabbar页面。如果是必须得话，可以使用wx.switchTab进行跳转！</div><div class="line">   wx.redirtTo(object):关闭当前页面，跳转到应用内某个页面。ps：那就没得返回了！！！</div><div class="line">   wx.reLaunch(object):关闭所有页面，打开应用某个页面！</div><div class="line">   小程序最多只能打开5个页面，当打开页面的个数达到5个以后，wx.navigateTo不能正常</div><div class="line">   打开新的页面，请避免层级过多的交互方式，或使用wx.redirectTo重定向。</div></pre></td></tr></table></figure></p>
+<p><strong>2、关于底部的Tab</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">tabBar底部导航栏：tabBar是一个数组。配置最少2个至多5个！</div><div class="line">   tabBar样式设置在app.json里设置！</div><div class="line">   例如:</div><div class="line">   <span class="string">"tabBar"</span>:&#123;</div><div class="line">    <span class="string">"color"</span>:<span class="string">"#333"</span>,</div><div class="line">    <span class="string">"selectedColor"</span>:<span class="string">"#fd0c3f"</span>,</div><div class="line">    <span class="string">"borderStyle"</span>:<span class="string">"#000"</span>,</div><div class="line">    <span class="string">"list"</span>:[&#123;</div><div class="line">      <span class="string">"selectedIconPath"</span>:<span class="string">"images/home-click.png"</span>,//点击后的图片</div><div class="line">      <span class="string">"iconPath"</span>:<span class="string">"images/home.png"</span>,//未点击时图片</div><div class="line">      <span class="string">"pagePath"</span>:<span class="string">"pages/index/index"</span>,//点击跳转的地址</div><div class="line">      <span class="string">"text"</span>:<span class="string">"首页"</span>//tab上显示的文字（需要跳转页面的title）</div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">      <span class="string">"selectedIconPath"</span>:<span class="string">"images/search-click.png"</span>,</div><div class="line">      <span class="string">"iconPath"</span>:<span class="string">"images/search.png"</span>,</div><div class="line">      <span class="string">"pagePath"</span>:<span class="string">"pages/search/search"</span>,</div><div class="line">      <span class="string">"text"</span>:<span class="string">"搜索"</span> </div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">      <span class="string">"selectedIconPath"</span>:<span class="string">"images/person-click.png"</span>,</div><div class="line">      <span class="string">"iconPath"</span>:<span class="string">"images/person.png"</span>,</div><div class="line">      <span class="string">"pagePath"</span>:<span class="string">"pages/person/person"</span>,</div><div class="line">      <span class="string">"text"</span>:<span class="string">"个人中心"</span> </div><div class="line">    &#125;]</div><div class="line"> &#125;</div><div class="line"> 进入程序默认一般都是index.wxml页面，所以在app.json里设置<span class="string">"pages"</span>的时候，第一个一定得是index.wxml</div><div class="line"> 		<span class="string">"pages"</span>[</div><div class="line"> 			<span class="string">"page/index/index"</span></div><div class="line"> 			xxx</div><div class="line"> 			xxx</div><div class="line"> 			xxxx</div><div class="line"> 		]</div></pre></td></tr></table></figure></p>
+<p><strong>3、点击跳转传值</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">e.target:在小程序中，可以通过e.target获取到点击的元素的一些属性（id，offsetleft，offsettop）;</div><div class="line">以下:</div><div class="line">  wxml:  &lt;image wx:<span class="keyword">if</span>=<span class="string">"&#123;&#123;item.pic_url&#125;&#125;"</span> src=<span class="string">"&#123;&#123;item.pic_url&#125;&#125;"</span> bindtap=<span class="string">"toGoods"</span>    id=<span class="string">"[&#123;&#123;item.param&#125;&#125;,&#123;&#123;item.num_iid&#125;&#125;]"</span>  /&gt;</div><div class="line">     js:    toGoods:<span class="keyword">function</span>(event)&#123;</div><div class="line">       		 var id=event.target.id;</div><div class="line"> 				 wx.navigateTo(&#123;url:<span class="string">'../goods/goods?id='</span>+id&#125;)</div><div class="line">		  &#125;</div><div class="line">  goods=&gt;js onLoad:<span class="keyword">function</span>(options)&#123;</div><div class="line">  	          var id=options.id;</div><div class="line">           &#125;</div><div class="line"></div><div class="line">  上面就是整个传值取值的一个流程 ，目前我是这样用来传值的。</div></pre></td></tr></table></figure></p>
+        
+          <a class="article-more-a" href="/2018/10/26/小程序/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">wx</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/26/小程序/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-常见的基础问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -787,161 +945,6 @@
 
 
   
-    <article id="post-定位滑动位置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/06/定位滑动位置/">定位滑动位置</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/06/定位滑动位置/" class="archive-article-date">
-  	<time datetime="2017-12-06T03:06:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>需求</strong>: 用户在浏览列表浏览时，点击一个列表进去详情页，返回要求记录用户刚刚浏览的位置，而不是刷新页面到了页面顶部！（ps：用户刷到几十几百条的时候，不应该让用户重新开始）</p>
-<p><strong>sessionStorage</strong>： 针对一个session的数据存储（<strong>关闭窗口，存储的数据清空</strong>），将数据存到session中，管你前进后退还是刷新，数据依然存在，关闭窗口后再进页面才会清空数据！</p>
-<p><strong>实现思路</strong>: 页面滚动，将<strong>滚动位置存到session中</strong>-&gt; 再次进入页面中，到<strong>session中取出上次保存的浏览位置</strong>-&gt; 滚动到<strong>对应的位置</strong></p>
-        
-          <a class="article-more-a" href="/2017/12/06/定位滑动位置/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JQ</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/06/定位滑动位置/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-事件委托" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/28/事件委托/">事件委托</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/28/事件委托/" class="archive-article-date">
-  	<time datetime="2017-11-28T08:18:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>事件委托</strong>：利用事件冒泡的特性，将里层的事件委托给外层事件，根据event对象的属性进行事件委托，改善性能。使用事件委托能够避免对特定的每个节点添加事件监听器；事件监听器是被添加到他们的父元素上。事件监听器会分析从子元素冒泡上来的事件，找到是哪个子元素的事件。（官方语言）</p>
-<p>例子多的很：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line">&lt;table id=<span class="string">"table"</span> border=<span class="string">"1"</span> style=<span class="string">"cursor: pointer;"</span>&gt;</div><div class="line">    &lt;tr&gt;</div><div class="line">    　　&lt;td&gt;table01&lt;/td&gt;</div><div class="line">    　　&lt;td&gt;table02&lt;/td&gt;</div><div class="line">    　　&lt;td&gt;table03&lt;/td&gt;</div><div class="line">    　　&lt;td&gt;table04&lt;/td&gt;</div><div class="line">    　　&lt;td&gt;table05&lt;/td&gt;</div><div class="line">    　　&lt;td&gt;table06&lt;/td&gt;</div><div class="line">    　　&lt;td&gt;table07&lt;/td&gt;</div><div class="line">    　　&lt;td&gt;table08&lt;/td&gt;</div><div class="line">    　　&lt;td&gt;table09&lt;/td&gt;</div><div class="line">    　　&lt;td&gt;table10&lt;/td&gt;</div><div class="line">    &lt;/tr&gt;</div><div class="line">&lt;/table&gt;</div><div class="line"></div><div class="line">//js</div><div class="line">var table = document.getElementById(<span class="string">"table"</span>);</div><div class="line">    <span class="keyword">if</span>(table.addEventListener)&#123;</div><div class="line">    	//addEventListener()是标准的绑定事件监听函数的方法，是W3C所支持的，Chrome、FireFox、Opera、Safari、IE9.0其以上版本都支持干函数，但是IE8.0及其以下版本不支持该方法，他是使用attachEvent()来绑定事件监听函数。所以、这种绑定事件的方法必须要处理浏览器兼容问题！</div><div class="line">        table.addEventListener(<span class="string">"click"</span>,<span class="keyword">function</span>(e)&#123;</div><div class="line">            var e = e||window.event;</div><div class="line">            //IE没有e.target，有e.srcElement</div><div class="line">            var target = e.target||e.srcElement;</div><div class="line">            //判断事件目标是否是td，是的话target即为目标节点td</div><div class="line">            <span class="keyword">if</span>(target.tagName.toLowerCase()==<span class="string">"td"</span>)&#123;</div><div class="line">                changeStyle(target);</div><div class="line">                console.log(target.innerHTML);</div><div class="line">            &#125;</div><div class="line">        &#125;,<span class="literal">false</span>);</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        table.attachEvent(<span class="string">"onclick"</span>,<span class="keyword">function</span>(e)&#123;</div><div class="line">            var e = e||window.event;</div><div class="line">            //IE没有e.target，有e.srcElement</div><div class="line">            var target = e.target||e.srcElement;</div><div class="line">            //判断事件目标是否是td，是的话target即为目标节点td</div><div class="line">            <span class="keyword">if</span>(target.tagName.toLowerCase()==<span class="string">"td"</span>)&#123;</div><div class="line">                changeStyle(target);</div><div class="line">                console.log(target.innerHTML);</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &#125;;</div><div class="line">     //JQ写法</div><div class="line">    	$(<span class="string">"#table"</span>).on(<span class="string">"click"</span>,<span class="string">"td"</span>,<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">    		changeStyle($(this));</div><div class="line">     		console.log($(this).html())</div><div class="line">    &#125;)</div><div class="line"><span class="keyword">function</span> changeStyle(ele)&#123;</div><div class="line">    ele.innerHTML = <span class="string">"已点击"</span></div><div class="line">    ele.style.background=<span class="string">"#900"</span>;</div><div class="line">    ele.style.color = <span class="string">"#fff"</span>; </div><div class="line">//JQ</div><div class="line">	ele.html(<span class="string">"已点击"</span>);	</div><div class="line">	ele.css(&#123;<span class="string">"background-color"</span>:<span class="string">"#900"</span>,<span class="string">"color"</span>:<span class="string">"#fff"</span>&#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>这里可以看到我们并没有对所有的td绑定事件而是给他们的父元素table绑定事件，极大的提高了性能，这样做还可以对动态加进来的元素进行处理，即未来元素，用直接绑定方法是不能成功的，只能用事件委托，上上篇blog说到的live()也可以解决但是JQ 1.3版本后废弃了这个功能！事件委托是通过事件冒泡实现的，所以子元素阻止了事件冒泡，那么委托事件也将失效！</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/28/事件委托/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1043,11 +1046,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color3">JQ</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1055,7 +1062,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JQ</a>
+                <a href="javascript:void(0)" class="js-tag color3">wx</a>
               </li>
             
             <div class="clearfix"></div>

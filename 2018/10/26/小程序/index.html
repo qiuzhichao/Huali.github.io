@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://qiuzhichao.me">
-  <title>Archives: 2017/9 | Francis</title>
+  <title>小程序 | Francis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Chance favors the prepared mind">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Francis">
-<meta property="og:url" content="http://qiuzhichao.me/archives/2017/09/index.html">
+  <meta name="description" content="简易小程序demo小程序的火爆，不由赘述了，周边的人都在弄小程序。公司也有做小程序的计划，无奈，方案，什么的都没有定下来。这里是源码地址。做的比较糙，只是些简单的页面交互，渲染而已，涉及的核心知识不多。结合多方面做点小总结。 1、关于小程序页面路由跳转12345wx.navigateTo保留当前页面，跳转到应用内的某个页面。但是不能跳到tabbar页面。如果是必须得话，可以使用wx.switchT">
+<meta name="keywords" content="wx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小程序">
+<meta property="og:url" content="http://qiuzhichao.me/2018/10/26/小程序/index.html">
 <meta property="og:site_name" content="Francis">
-<meta property="og:description" content="Chance favors the prepared mind">
+<meta property="og:description" content="简易小程序demo小程序的火爆，不由赘述了，周边的人都在弄小程序。公司也有做小程序的计划，无奈，方案，什么的都没有定下来。这里是源码地址。做的比较糙，只是些简单的页面交互，渲染而已，涉及的核心知识不多。结合多方面做点小总结。 1、关于小程序页面路由跳转12345wx.navigateTo保留当前页面，跳转到应用内的某个页面。但是不能跳到tabbar页面。如果是必须得话，可以使用wx.switchT">
+<meta property="og:updated_time" content="2018-11-06T08:49:08.959Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Francis">
-<meta name="twitter:description" content="Chance favors the prepared mind">
+<meta name="twitter:title" content="小程序">
+<meta name="twitter:description" content="简易小程序demo小程序的火爆，不由赘述了，周边的人都在弄小程序。公司也有做小程序的计划，无奈，方案，什么的都没有定下来。这里是源码地址。做的比较糙，只是些简单的页面交互，渲染而已，涉及的核心知识不多。结合多方面做点小总结。 1、关于小程序页面路由跳转12345wx.navigateTo保留当前页面，跳转到应用内的某个页面。但是不能跳到tabbar页面。如果是必须得话，可以使用wx.switchT">
   
     <link rel="alternative" href="/atom.xml" title="Francis" type="application/atom+xml">
   
@@ -148,60 +150,185 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-小程序" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/13/九月/" class="archive-article-date">
-  	<time datetime="2017-09-13T05:47:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-13</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/13/九月/">九月</a>
+    <h1 class="article-title" itemprop="name">
+      小程序
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/10/26/小程序/" class="archive-article-date">
+  	<time datetime="2018-10-26T07:57:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="简易小程序demo"><a href="#简易小程序demo" class="headerlink" title="简易小程序demo"></a>简易小程序demo</h2><p>小程序的火爆，不由赘述了，周边的人都在弄小程序。公司也有做小程序的计划，无奈，方案，什么的都没有定下来。这里是源码<a href="https://github.com/qiuzhichao/small-routine-demo" target="_blank" rel="external">地址</a>。做的比较糙，只是些简单的页面交互，渲染而已，涉及的核心知识不多。结合多方面做点小总结。</p>
+<p><strong>1、关于小程序页面路由跳转</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">wx.navigateTo保留当前页面，跳转到应用内的某个页面。但是不能跳到tabbar页面。如果是必须得话，可以使用wx.switchTab进行跳转！</div><div class="line">   wx.redirtTo(object):关闭当前页面，跳转到应用内某个页面。ps：那就没得返回了！！！</div><div class="line">   wx.reLaunch(object):关闭所有页面，打开应用某个页面！</div><div class="line">   小程序最多只能打开5个页面，当打开页面的个数达到5个以后，wx.navigateTo不能正常</div><div class="line">   打开新的页面，请避免层级过多的交互方式，或使用wx.redirectTo重定向。</div></pre></td></tr></table></figure></p>
+<p><strong>2、关于底部的Tab</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">tabBar底部导航栏：tabBar是一个数组。配置最少2个至多5个！</div><div class="line">   tabBar样式设置在app.json里设置！</div><div class="line">   例如:</div><div class="line">   <span class="string">"tabBar"</span>:&#123;</div><div class="line">    <span class="string">"color"</span>:<span class="string">"#333"</span>,</div><div class="line">    <span class="string">"selectedColor"</span>:<span class="string">"#fd0c3f"</span>,</div><div class="line">    <span class="string">"borderStyle"</span>:<span class="string">"#000"</span>,</div><div class="line">    <span class="string">"list"</span>:[&#123;</div><div class="line">      <span class="string">"selectedIconPath"</span>:<span class="string">"images/home-click.png"</span>,//点击后的图片</div><div class="line">      <span class="string">"iconPath"</span>:<span class="string">"images/home.png"</span>,//未点击时图片</div><div class="line">      <span class="string">"pagePath"</span>:<span class="string">"pages/index/index"</span>,//点击跳转的地址</div><div class="line">      <span class="string">"text"</span>:<span class="string">"首页"</span>//tab上显示的文字（需要跳转页面的title）</div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">      <span class="string">"selectedIconPath"</span>:<span class="string">"images/search-click.png"</span>,</div><div class="line">      <span class="string">"iconPath"</span>:<span class="string">"images/search.png"</span>,</div><div class="line">      <span class="string">"pagePath"</span>:<span class="string">"pages/search/search"</span>,</div><div class="line">      <span class="string">"text"</span>:<span class="string">"搜索"</span> </div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">      <span class="string">"selectedIconPath"</span>:<span class="string">"images/person-click.png"</span>,</div><div class="line">      <span class="string">"iconPath"</span>:<span class="string">"images/person.png"</span>,</div><div class="line">      <span class="string">"pagePath"</span>:<span class="string">"pages/person/person"</span>,</div><div class="line">      <span class="string">"text"</span>:<span class="string">"个人中心"</span> </div><div class="line">    &#125;]</div><div class="line"> &#125;</div><div class="line"> 进入程序默认一般都是index.wxml页面，所以在app.json里设置<span class="string">"pages"</span>的时候，第一个一定得是index.wxml</div><div class="line"> 		<span class="string">"pages"</span>[</div><div class="line"> 			<span class="string">"page/index/index"</span></div><div class="line"> 			xxx</div><div class="line"> 			xxx</div><div class="line"> 			xxxx</div><div class="line"> 		]</div></pre></td></tr></table></figure></p>
+<p><strong>3、点击跳转传值</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">e.target:在小程序中，可以通过e.target获取到点击的元素的一些属性（id，offsetleft，offsettop）;</div><div class="line">以下:</div><div class="line">  wxml:  &lt;image wx:<span class="keyword">if</span>=<span class="string">"&#123;&#123;item.pic_url&#125;&#125;"</span> src=<span class="string">"&#123;&#123;item.pic_url&#125;&#125;"</span> bindtap=<span class="string">"toGoods"</span>    id=<span class="string">"[&#123;&#123;item.param&#125;&#125;,&#123;&#123;item.num_iid&#125;&#125;]"</span>  /&gt;</div><div class="line">     js:    toGoods:<span class="keyword">function</span>(event)&#123;</div><div class="line">       		 var id=event.target.id;</div><div class="line"> 				 wx.navigateTo(&#123;url:<span class="string">'../goods/goods?id='</span>+id&#125;)</div><div class="line">		  &#125;</div><div class="line">  goods=&gt;js onLoad:<span class="keyword">function</span>(options)&#123;</div><div class="line">  	          var id=options.id;</div><div class="line">           &#125;</div><div class="line"></div><div class="line">  上面就是整个传值取值的一个流程 ，目前我是这样用来传值的。</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p><strong>4、关于小程序一些生命周期</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">Page()定义在js文件中，Page()函数用来注册一个页面。页面的最上级就是Page，小程序里没有window对象！</div><div class="line">   data：页面的初始数据。ps：console.log(this.data.xxx);this指的就是page！</div><div class="line">   onLoad：生命周期函数---监听页面加载。</div><div class="line">   onReady：生命周期函数--监听页面初次渲染完成。</div><div class="line">   onShow：生命周期函数--监听页面显示。</div><div class="line">   onHide：生命周期函数--监听页面隐藏。</div><div class="line">   onUnload：生命周期函数--监听页面卸载。</div><div class="line">   onPullDownRefresh：监听用户下拉动作。</div><div class="line">   onReachBottom：页面上拉触底事件的处理函数。</div><div class="line">   onShareAppMessage：用户点击右上角转发。</div><div class="line">   onPageScroll：页面滚动触发事件的处理函数。</div><div class="line">   onTabItemTap：当前是tab页，点击tab时触发。</div></pre></td></tr></table></figure></p>
+<p><strong>5、在小程序中如何引入iconfont</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">我将需要引入的iconfont的css链接里的内容直接copy到小程序中！而后，当某个页面需要的时候，就在对应页面的wxss文件中@import就好。然后再wxml的操作就都是一样的，&lt;icon class=<span class="string">"iconfont shouye"</span>&gt;&lt;/icon&gt;</div></pre></td></tr></table></figure></p>
+<p><strong>6、关于App()</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">App()必须在app.js中注册，且不能注册多个。不要在定义于App()内的函数中调用getApp()。直接使用this既可以拿到app实例！</div></pre></td></tr></table></figure></p>
+<p><strong>7、关于scroll-view</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">不要在scroll-view中使用textarea、map、canvas、video组件。scroll-view的优先级高于scroll-top。在滚动scroll-view时会阻止页面回弹，所以在scroll-view滚动，无法触发onPullDownRefresh。</div></pre></td></tr></table></figure></p>
+<p>不定期更新。。。。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>心有猛虎，细嗅蔷薇<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">wx</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://qiuzhichao.me/2018/10/26/小程序/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/11/06/js数组遍历/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          js数组遍历
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2018/10/11/常见的基础问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">常见的基础问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -224,8 +351,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
