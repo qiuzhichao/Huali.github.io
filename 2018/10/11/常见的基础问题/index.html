@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://qiuzhichao.me/2018/10/11/常见的基础问题/index.html">
 <meta property="og:site_name" content="Francis">
 <meta property="og:description" content="十月问题1：Scope作用范围1234(function()&amp;#123;	var a=b=5;&amp;#125;)()console.log(b) 回答：上面的代码会打印5。这里有两个变量声明，但a使用关键字var声明的。代表它是一个函数的局部变量。与此相反b变成了全局变量。这个问题还有另一个诀窍是，他没有使用严格模式（’use strict’）。如果启用了严格模式，代码就会引发ReferenceErr">
-<meta property="og:updated_time" content="2018-10-11T07:54:42.141Z">
+<meta property="og:updated_time" content="2018-11-06T09:56:45.841Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常见的基础问题">
 <meta name="twitter:description" content="十月问题1：Scope作用范围1234(function()&amp;#123;	var a=b=5;&amp;#125;)()console.log(b) 回答：上面的代码会打印5。这里有两个变量声明，但a使用关键字var声明的。代表它是一个函数的局部变量。与此相反b变成了全局变量。这个问题还有另一个诀窍是，他没有使用严格模式（’use strict’）。如果启用了严格模式，代码就会引发ReferenceErr">
@@ -183,7 +183,7 @@
 <p>在第一个console调用中，getFullname()被调用作为obj.prop对象的函数。所以，上下文指的是后者，函数返回该对象的fullname。与此相反，当getFullname()被分配到test变量时，上下文指的是全局对象(window)。这里test被隐式设置为全局对象的属性。出于这个原因，该函数返回window的fullname，即定义在第一行的那个值。</p>
 <p><strong>如何让上文中的第二个console也打印Rosa（call and apply）</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">console.log(test.call(obj.prop))</div></pre></td></tr></table></figure>
-<p>call:调用一个对象的一个方法，用另一个对象替换当前对象。例如：test.call(a,args1,args2);<br>apply:调用一个对象的一个方法，用另一个对象替换当前对象。例如：test.call(a,args);</p>
+<p>call:调用一个对象的一个方法，用另一个对象替换当前对象。例如：test.call(a,args1,args2);<br>apply:调用一个对象的一个方法，用另一个对象替换当前对象。例如：test.apply(a,args);</p>
 <p>它们共同之处：<br>都可以用来代替另一个对象调用一个方法，将一个函数的对象上下文从初始的对象改变为由a替换的新对象。即上文的obj.prop。</p>
 
       
