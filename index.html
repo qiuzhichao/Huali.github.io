@@ -150,6 +150,84 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-js连接打印机打印" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/21/js连接打印机打印/">js连接打印机打印</a>
+    </h1>
+  
+
+        
+        <a href="/2018/11/21/js连接打印机打印/" class="archive-article-date">
+  	<time datetime="2018-11-21T07:47:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="关于js打印"><a href="#关于js打印" class="headerlink" title="关于js打印"></a>关于js打印</h2><p>js没法自己去连接打印机的，所以这里推荐个插件<a href="http://www.lodop.net/index.html" target="_blank" rel="external">Lodop</a>;控件非常简单方法调用也蛮方便的！</p>
+<p><strong>使用：</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">跟其他插件一样，都得引入官方js</div><div class="line">&lt;script language=<span class="string">"javascript"</span> src=<span class="string">"js/LodopFuncs.js"</span>&gt;&lt;/script&gt;</div><div class="line">然后呢需要实例化。</div><div class="line">&lt;script&gt;</div><div class="line">	var lodop;</div><div class="line">	lodop=getLodop();</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p><strong>调用API</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">lodop.PREVIEW() //打印预览</div><div class="line">lodop.PRINT() //直接打印</div><div class="line">lodop.SET_PRINT_PAGESIZE() //设置纸张大小</div><div class="line">lodop.ADD_PRINT_BARCODE() //设置打印的位置、模板、内容。下面会说到介绍位置</div><div class="line">lodop.SET_PRINTER_INDEX(i) //指定打印机</div><div class="line">lodop.GET_PRINTER_COUNT() //获取打印机个数</div><div class="line">lodop.GET_PRINTER_NAME() //获取打印机名字</div><div class="line">lodop.SET_PRINT_COPIES() //设置打印张数</div><div class="line">以上就是我本次用到的API。主要记录下我用过的！</div></pre></td></tr></table></figure></p>
+        
+          <a class="article-more-a" href="/2018/11/21/js连接打印机打印/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/11/21/js连接打印机打印/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-js数组遍历" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -866,85 +944,6 @@
 
 
   
-    <article id="post-一些小方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/11/一些小方法/">一些小方法</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/11/一些小方法/" class="archive-article-date">
-  	<time datetime="2017-12-11T06:11:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>NO.1 <strong>需求：</strong>产品经理要求我在网页上做一个复制的功能，（网页上长按复制)说是很久前就想到了。</p>
-<p>不怎么懂得拒绝人的我，就默默的百度了下网上也都有方法但大部分倾向于<strong>PC</strong>端而我做的是手机端的<strong>M站</strong>，大家都没有找到合适的办法，各种论团 壁虎逛终于被我找到了个大神写的方法<strong>地址</strong>我就不知道了，功能也是我写blog几天前做的！我现在记录一下分享出来，非原创！</p>
-<p><strong>方法：</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">	&lt;label&gt;订单号：&lt;span class=<span class="string">"order_number"</span> id=<span class="string">"target"</span>&gt;99999999999999999&lt;/span&gt;&lt;button id=<span class="string">"copy_btn"</span> data-clipboard-action=<span class="string">"copy"</span> data-clipboard-target=<span class="string">"#target"</span>&gt;复制&lt;/button&gt;&lt;/label&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span> src=<span class="string">"js/jquery.min.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span> src=<span class="string">"js/clipboard.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</div><div class="line">	$(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">		var targetText=$(<span class="string">"#target"</span>).text();</div><div class="line">	var clipboard=new Clipboard(<span class="string">"#copy_btn"</span>);</div><div class="line">	clipboard.on(<span class="string">'success'</span>,<span class="keyword">function</span>(e)&#123;</div><div class="line">		console.info(<span class="string">"Action"</span>,e.action);</div><div class="line">		console.info(<span class="string">"Text"</span>,e.text);</div><div class="line">		console.info(<span class="string">"Trigger"</span>,e.trigger);</div><div class="line">		alert(<span class="string">"复制成功"</span>);</div><div class="line">		e.clearSelection();</div><div class="line">	&#125;)</div><div class="line">	&#125;)</div><div class="line">&lt;/script&gt;</div><div class="line">找不到clipboard.js的看这里我附上原作者的github的地址：https://zenorocha.github.io/clipboard.js</div><div class="line">也附一下我的吧，我把代码copy下来了！地址：https://github.com/qiuzhichao/clipboard.git</div></pre></td></tr></table></figure></p>
-<p>我测试大部分手机上都可以实现这个功能！！！<br>
-        
-          <a class="article-more-a" href="/2017/12/11/一些小方法/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JQ</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/11/一些小方法/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1042,7 +1041,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1050,15 +1049,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JQ</a>
+                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">JQ</a>
               </li>
              
               <li class="article-tag-list-item">
