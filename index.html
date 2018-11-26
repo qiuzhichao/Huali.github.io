@@ -150,6 +150,85 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-关于接触layui做后台" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/26/关于接触layui做后台/">关于接触layui做后台</a>
+    </h1>
+  
+
+        
+        <a href="/2018/11/26/关于接触layui做后台/" class="archive-article-date">
+  	<time datetime="2018-11-26T01:25:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="layui"><a href="#layui" class="headerlink" title="layui"></a>layui</h2><p>最近配合后端做后台迁移，要求是，快，好，简。关键是在快这个字，由iframe导入已有页面，可以大幅度缩短时间。layui是一款采用自身模板块规范编写的前端UI框架，遵循原生HTML/CSS/JS的书写与组织形式，门槛极低拿来即用！！！</p>
+<p><strong>准备:</strong><br>去<a href="https://www.layui.com/" target="_blank" rel="external">layui</a>,官网直接下载后台布局demo代码,直接就有一个大致的模样了！我主要记录下我涉及到的地方！！！</p>
+<p><strong>使用:</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line">后台需要element内置模板所以</div><div class="line">layui.use(<span class="string">'element'</span>,<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line"> var element=layui.element;</div><div class="line"> var $=jQuery=layui.jquery;</div><div class="line">&#125;)</div><div class="line">作为后台框架，必定少不了tabs的增删改。目前element模块提供的方法。</div><div class="line">var active=&#123;</div><div class="line">//添加tab</div><div class="line"> tabAdd:<span class="keyword">function</span>(id,url)&#123;</div><div class="line">  element.tabAdd(<span class="string">'demo'</span>,&#123;</div><div class="line">  title:<span class="string">'选项卡的标题'</span>,</div><div class="line">  content:<span class="string">'&lt;iframe data-frameid="'</span>+id+<span class="string">'" frameborder="0" name="content" scrolling="yes" width="100%" src="'</span> + url + <span class="string">'"&gt;&lt;/iframe&gt;'</span>,//支持传入html(iframe)</div><div class="line">  id:<span class="string">'选项卡标题的lay-id的属性值'</span>//用于绑定左侧栏与tabs的关系</div><div class="line">&#125;)	</div><div class="line">&#125;,</div><div class="line">tabChange:<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">//用于外部切换到指定tab项上</div><div class="line">element.tabChange(<span class="string">'demo'</span>,<span class="string">'lay-id'</span>);//切换到lay-id=<span class="string">'yyy'</span>的这一项。	</div><div class="line">&#125;,</div><div class="line">tabDelete:<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">//删除某一项</div><div class="line">element.tabDelete(<span class="string">"demo"</span>, id);//删除	</div><div class="line">&#125;,</div><div class="line">tabDeleteAll:<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">//删除全部</div><div class="line">$.each(ids,<span class="keyword">function</span>(el,item)&#123;</div><div class="line">element.tabDelete(<span class="string">"demo"</span>, item);//删除</div><div class="line">&#125;)</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">上面使用到框架给的方法</div><div class="line">tabAdd方法不做限制的话，每次点击都会生成一个，所以每次点击生成前我们需要做一个判断！</div><div class="line"></div><div class="line">$(<span class="string">'左侧栏'</span>).on(<span class="string">'click'</span>,<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">var that=$(this);</div><div class="line"><span class="keyword">if</span>($(<span class="string">'.layui-tab-title li[lay-id]'</span>).length&lt;=0)&#123;</div><div class="line"> active.tabAdd(that.attr(<span class="string">'data-id'</span>),that.attr(<span class="string">'data-url'</span>));</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">var flag=<span class="literal">false</span>;</div><div class="line">$.each($(<span class="string">'.layui-tab-title li[lay-id]'</span>),<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line"><span class="keyword">if</span> ($(this).attr(<span class="string">"lay-id"</span>) == that.attr(<span class="string">"data-id"</span>)) &#123;</div><div class="line"> flag = <span class="literal">true</span>;</div><div class="line">&#125;</div><div class="line">&#125;)</div><div class="line"><span class="keyword">if</span>(flag==<span class="literal">false</span>)&#123;</div><div class="line"> active.tabAdd(that.attr(<span class="string">'data-id'</span>),that.attr(<span class="string">'data-url'</span>));</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">active.tabChange(that.attr(<span class="string">'data-id'</span>));</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>上面就是框架的tabs环节了！下面是扩展。<br>
+        
+          <a class="article-more-a" href="/2018/11/26/关于接触layui做后台/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JQ</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/11/26/关于接触layui做后台/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-js连接打印机打印" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -865,85 +944,6 @@
 
 
   
-    <article id="post-碎嘴" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/26/碎嘴/">碎嘴</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/26/碎嘴/" class="archive-article-date">
-  	<time datetime="2017-12-26T07:26:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近跟后台讨论的一些js的小东西，（后台是PHP）PHP是世界上最好的语言？</p>
-<p>由于他在js里操作数组，于是：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">concat(): arr1.concat(arr2) //合并数组</div><div class="line">indexOf(): str.indexOf(<span class="string">"xxx"</span>) //判断元素是否在数组内，找的到返回index，找不到返回-1;</div><div class="line">sort():arr.sort();arr.sort(<span class="keyword">function</span>)//数组排序;</div><div class="line">push():arr.push(<span class="string">"xxx"</span>)//在数组末尾加一个或多个元素;</div><div class="line">slice():该方法不会修改数组，而是返回一个子数组</div><div class="line">splice():该方法可删除从index处开始的0个会多个元素，并且用参数列表中声明的一个或多个值来替换那些被删除的元素。</div><div class="line">		<span class="built_in">return</span>出来的是含有被删除元素的数组！！</div><div class="line">		var arr2=new Array(4);</div><div class="line">		arr2[0]=<span class="string">"jani"</span></div><div class="line">		arr2[1]=<span class="string">"hege"</span></div><div class="line">		arr2[2]=<span class="string">"stale"</span></div><div class="line">		arr2[3]=<span class="string">"kai jim"</span></div><div class="line">		arr2[4]=<span class="string">"borge"</span>;</div><div class="line">		console.log(arr2);</div><div class="line">		console.log(arr2.slice(0));//[<span class="string">"jani"</span>,<span class="string">"hege"</span>,<span class="string">"stale"</span>,<span class="string">"kai jim"</span>,<span class="string">"borge"</span>]</div><div class="line">		console.log(arr2.splice(1,1));//[<span class="string">"hege"</span>]</div></pre></td></tr></table></figure>
-<p><strong>disable</strong>只对表单元素(button)有效果<br>
-        
-          <a class="article-more-a" href="/2017/12/26/碎嘴/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/26/碎嘴/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1049,19 +1049,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">JQ</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">wx</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
