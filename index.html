@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://qiuzhichao.me">
   <title>Francis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Chance favors the prepared mind">
+  <meta name="description" content="victory loves preparation">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Francis">
 <meta property="og:url" content="http://qiuzhichao.me/index.html">
 <meta property="og:site_name" content="Francis">
-<meta property="og:description" content="Chance favors the prepared mind">
+<meta property="og:description" content="victory loves preparation">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Francis">
-<meta name="twitter:description" content="Chance favors the prepared mind">
+<meta name="twitter:description" content="victory loves preparation">
   
     <link rel="alternative" href="/atom.xml" title="Francis" type="application/atom+xml">
   
@@ -51,7 +51,7 @@
 		  <h1 class="header-author"><a href="">Francis</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">Chance favors the prepared mind</p>
+		<p class="header-subtitle">victory loves preparation</p>
 		
 
 		<nav class="header-menu">
@@ -107,7 +107,7 @@
 			  <h1 class="header-author js-header-author">Francis</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>Chance favors the prepared mind<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>victory loves preparation<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -149,6 +149,82 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-面向对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/17/面向对象/">面向对象</a>
+    </h1>
+  
+
+        
+        <a href="/2019/01/17/面向对象/" class="archive-article-date">
+  	<time datetime="2019-01-17T07:27:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p>今天逛知乎，看到一篇帖子理解什么是面向对象，觉得形容的贼好，做个记录。<br>大体如下：如果现在有人叫你把大象放到冰箱里，我们使用面向过程如何做呢？我们可以分以下步骤：<br>1、把冰箱门打开。<br>2、把大象放到冰箱里。<br>3、把冰箱门关上。<br>我们程序员 就会把这三个步骤写成三个函数：<br>1、openTheFridgeDoor()<br>2、putElephantIntoFridge()<br>3、closeTheFridgeDoor()<br>然后我们依次调用这几个函数就行了。你以为完事了，但是过了两天，这个需求衍变了多个方向例如：<br>1、请把狮子也放进冰箱。<br>2、请把猴子放进微波炉。<br>3、请其他动物也放进冰箱。。。。<br>诸如此类，此时要使用面向过程的方式实现这些需求，就要重新定义实现这些需求的函数。这无疑是让人抓狂的一件事。我们的i想法是：如果每次变更需求，我们都不用自己去做这些过程，二十指挥别人去做，所以我们的面向对象的思想，第一个转变就是做一个执行者，变成一个指挥者。<br>如果使用面向对象的思想完成把大象放进冰箱的需求，我们的做法变成这样：<br>1、找到冰箱，命令冰箱自己打开冰箱的门。<br>2、找到大象，命令大象自己进入到冰箱里面。<br>3、再次命令冰箱自己把门关上。<br>所以实现这个需求需要的实体有：大象、冰箱。我们九八实现需求中出现的实体称为对象。大象要自己进入冰箱，冰箱要自己开门关门，进入冰箱，开门和关门我们称为对象的能力，在编程中通常用方法表示。<br>所以做个总结：<br>1、面向过程就是关注实现需求的第二个步骤，任何的工作都想需要自己去做。<br>2、面向对象就是什么事都交给能做这件事的对象去做。<br>如果需求变成了上文说的那些，面向对象要如何解决问题？现在我们要做的就是：分析需求中出现的对象（实体），然后分别赋予这对象相应的能力。<br>在新的需求中，要把大象、狮子、猴子这些【动物】放假冰箱、微波炉这些【容器】中。此时这里面要出现的对象(实体)就有：动物、容器。容器要有的方法(能力)是：开门和关门。动物要有的方法(能力)是：进入容器。<br>所以上述的需求都可以变成：<br>1、【容器】开门。<br>2、【动物】进入【容器】。<br>3、【容器】关门。<br>所以这样一来，我们就不用重复的定义函数来实现这些需求了，甚至将来需求又变成要把动物拿出来，我们也只需要在动物对象上拓展动物从容器中出来的方法。<br>
+        
+          <a class="article-more-a" href="/2019/01/17/面向对象/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/01/17/面向对象/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-关于接触layui做后台" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -867,86 +943,9 @@
 
 
   
-    <article id="post-懒加载" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/09/懒加载/">懒加载</a>
-    </h1>
-  
-
-        
-        <a href="/2018/02/09/懒加载/" class="archive-article-date">
-  	<time datetime="2018-02-09T06:19:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这近两个月，可真的有点忙！今天才算是差不多完工。休闲时光，回顾回顾！<br>可能很久没用lazyload插件了，不知道是怎么了，怎么都实现不了效果！</p>
-<p>于是就有想法写一个简单的懒加载的方法。。。</p>
-<p><strong>机制：</strong>懒加载，就是当页面滚动到可视页面的时候加载，避免一进入页面大量加载数据，到时页面加载缓慢，甚至崩掉（特别是电商网站）。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">loading</span></span>()&#123;</div><div class="line">	//图片懒加载</div><div class="line">	var <span class="variable">$window</span>=$(window);</div><div class="line">	//获取包含data-src属性的img，并以jq对象存入数组，在需要懒加载的img上加上data-src属性里面放上需要加载图的链接</div><div class="line">	var lazyImgs=$(<span class="string">"img[data-src]"</span>);</div><div class="line">	//定义函数事件</div><div class="line">	var onScroll=<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">		//获取页面滚动的高度</div><div class="line">		var wtop=<span class="variable">$window</span>.scrollTop();</div><div class="line">		<span class="keyword">if</span>(lazyImgs.length&gt;0)&#123;//判断是否还有未加载的图片</div><div class="line">			var wheight=<span class="variable">$window</span>.height();</div><div class="line">			//循环处理数组里的每个img元素;</div><div class="line">			$.each(lazyImgs,<span class="keyword">function</span>(index,value)&#123;</div><div class="line">				//判断是否在可视区域内</div><div class="line">				<span class="keyword">if</span>($(value).offset().top-wtop&lt;wheight)&#123;</div><div class="line">					$(value).attr(<span class="string">'src'</span>,$(value).attr(<span class="string">'data-src'</span>));</div><div class="line">				&#125;</div><div class="line">			&#125;);</div><div class="line">			//做的删除处理 浏览器有缓存机制，可有可无</div><div class="line">			//$.each(loadedIndex,<span class="keyword">function</span>(index)&#123;</div><div class="line">					lazyImgs.splice(index+1,1)</div><div class="line">				//&#125;)</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	//绑定事件</div><div class="line">	<span class="variable">$window</span>.scroll(onScroll);</div><div class="line">	//手动触发一次</div><div class="line">	onScroll()</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>以上就是我粗糙的一个懒加载，基本实现了我的需求！</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JQ</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/02/09/懒加载/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -958,7 +957,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 Francis
+    		&copy; 2019 Francis
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -1049,7 +1048,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JQ</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1057,11 +1056,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wx</a>
+                <a href="javascript:void(0)" class="js-tag color3">JQ</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">wx</a>
               </li>
             
             <div class="clearfix"></div>

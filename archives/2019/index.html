@@ -6,19 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://qiuzhichao.me">
-  <title>webpack | Francis</title>
+  <title>Archives: 2019 | Francis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="做个理解WEBPACK背景：我觉得： webpack就是帮助浏览器理解你代码里写的node语法。浏览器解析js文件时不能模块化，一个文件要暴露给另一个文件一个变量或者数据 ，那只能定义在全局作用下。这样会显得很局限性。毕竟所有代码不可能是一个人完成，或者说你可能引入的插件可能会覆盖你定义的全局变量，所以显得很漏洞。 初步实现文件之间互通：123456789101112131415161718192">
-<meta name="keywords" content="js">
-<meta property="og:type" content="article">
-<meta property="og:title" content="webpack">
-<meta property="og:url" content="http://qiuzhichao.me/2018/09/04/webpack/index.html">
+  <meta name="description" content="victory loves preparation">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Francis">
+<meta property="og:url" content="http://qiuzhichao.me/archives/2019/index.html">
 <meta property="og:site_name" content="Francis">
-<meta property="og:description" content="做个理解WEBPACK背景：我觉得： webpack就是帮助浏览器理解你代码里写的node语法。浏览器解析js文件时不能模块化，一个文件要暴露给另一个文件一个变量或者数据 ，那只能定义在全局作用下。这样会显得很局限性。毕竟所有代码不可能是一个人完成，或者说你可能引入的插件可能会覆盖你定义的全局变量，所以显得很漏洞。 初步实现文件之间互通：123456789101112131415161718192">
-<meta property="og:updated_time" content="2018-09-04T09:51:09.023Z">
+<meta property="og:description" content="victory loves preparation">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="webpack">
-<meta name="twitter:description" content="做个理解WEBPACK背景：我觉得： webpack就是帮助浏览器理解你代码里写的node语法。浏览器解析js文件时不能模块化，一个文件要暴露给另一个文件一个变量或者数据 ，那只能定义在全局作用下。这样会显得很局限性。毕竟所有代码不可能是一个人完成，或者说你可能引入的插件可能会覆盖你定义的全局变量，所以显得很漏洞。 初步实现文件之间互通：123456789101112131415161718192">
+<meta name="twitter:title" content="Francis">
+<meta name="twitter:description" content="victory loves preparation">
   
     <link rel="alternative" href="/atom.xml" title="Francis" type="application/atom+xml">
   
@@ -150,62 +148,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-webpack" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      webpack
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/01/17/面向对象/" class="archive-article-date">
+  	<time datetime="2019-01-17T07:27:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-17</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/01/17/面向对象/">面向对象</a>
     </h1>
   
 
-        
-        <a href="/2018/09/04/webpack/" class="archive-article-date">
-  	<time datetime="2018-09-04T08:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="做个理解WEBPACK"><a href="#做个理解WEBPACK" class="headerlink" title="做个理解WEBPACK"></a>做个理解WEBPACK</h2><p><strong>背景：</strong><br>我觉得： webpack就是帮助浏览器理解你代码里写的node语法。<br>浏览器解析js文件时不能模块化，一个文件要暴露给另一个文件一个变量或者数据 ，那只能定义在全局作用下。这样会显得很局限性。毕竟所有代码不可能是一个人完成，或者说你可能引入的插件可能会覆盖你定义的全局变量，所以显得很漏洞。</p>
-<p><strong>初步实现文件之间互通：</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"> //比如有两个js文件  js/a.js   js/b.js</div><div class="line"> //在 a.js中要获取b.js中的 flag这个变量</div><div class="line"></div><div class="line"> //首先在b.js中这样写</div><div class="line"> //node写法</div><div class="line"> var flag=<span class="literal">true</span>;</div><div class="line">     module exports=&#123;flag:flag&#125;;</div><div class="line">//这里也可以用es6的写法</div><div class="line">  var flag=<span class="literal">true</span>;</div><div class="line">     <span class="built_in">export</span>=&#123;flag&#125;;  </div><div class="line">//在这里就是暴露b文件当中的 flag这个属性</div><div class="line"></div><div class="line">//在a.js中我们就可以调用flag这个属性了</div><div class="line">//node写法</div><div class="line"> var flag =require(<span class="string">"./b"</span>).flag;</div><div class="line"> //es6写法</div><div class="line"> import &#123;flag&#125; from <span class="string">"./b"</span></div><div class="line">     <span class="keyword">if</span>(flag)&#123;</div><div class="line">         document.body.innerHTML=<span class="string">"&lt;div&gt; i got flag！！！&lt;/div&gt;"</span>;</div><div class="line">     &#125;</div><div class="line">//当然这些还是的在node上跑，浏览器上现在还是跑不通。所以我们下面就要安装webpack来帮助我们！！！</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<p><strong>安装：</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//全局安装</div><div class="line">npm i -g webpack</div><div class="line">//如果说，就是怕之后来的人拿到你的代码，然后引入的webpack与你现阶段写的webpack冲突，或者报错。那就需要你 给你当前文件 npm init然后再局部安装。</div><div class="line">//局部安装</div><div class="line">npm i -D webpack</div><div class="line">//这样子在package.json 里会显示你的webpack的版本。那之后的人只需要 npm i 就可以直接下载你现在版本的webpack。</div></pre></td></tr></table></figure></p>
-<p><strong>使用：</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">//现在我们就可以使用webpack来做个简单的打包。接着上面的例子：</div><div class="line">在当前文件夹下，输入命令   webpack a.js main.js;</div><div class="line">//这样你只需要在index.html里引入main.js，在浏览器上跑就可以了。</div><div class="line">命令的 a.js是就是你需要打包的入口文件，里面的依赖 我们不需要去管，webpack会去解决。后面的main.js就是你打包后的文件名。</div><div class="line"></div><div class="line">//当你的webpack不是全局安装时那我们在终端输入的命令就要加上本地的地址</div><div class="line">node_modules/.bin/webpack a.js main.js</div><div class="line">//如果觉得 这个命令特别长的话呢 ，我们也可以把这个命令写到package.json里面去。</div><div class="line">  找到<span class="string">"scripts"</span>  在里面直接写你的方法例如: </div><div class="line">      <span class="string">"scripts"</span>:&#123;<span class="string">"pack"</span>:<span class="string">"node_modules/.bin/webpack a.js main.js"</span>&#125;</div><div class="line">这样子 我们就可以直接在终端输入  npm run pack;就可以直接打包了。</div><div class="line">但这个也只是用在简单的项目中，如果大型项目这样子写命令可不行，那可太多了。</div><div class="line">所以我们就需要把这些命令写在一个文件里面。</div><div class="line"></div><div class="line">直接命名个 webpack.config.js文件。如下</div><div class="line">module.exports=&#123;</div><div class="line">    entry:<span class="string">"./a"</span>,//入口文件</div><div class="line">    output:&#123;</div><div class="line">        filename:<span class="string">"main.js"</span>,//输出文件</div><div class="line">        path:__dirname, //表示当前目录下</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">这样子我们就可以把package.json里面的<span class="string">"scripts"</span>更改下：</div><div class="line"><span class="string">"scripts"</span>:&#123;<span class="string">"pack"</span>:<span class="string">"node_modules/.bin/webpack --watch"</span>&#125;</div><div class="line">那我们在终端 直接输入  npm run pack 就可以了。</div><div class="line">后面加了watch参数后，只要我们代码变化，webpack也会跟着打包，很方便</div></pre></td></tr></table></figure></p>
-<p><strong>理解entry和output多入口多出口</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">//当我们的业务需求逻辑比较大  多个页面有多个依赖的时候怎么处理呢。。</div><div class="line"></div><div class="line">module.exports=&#123;</div><div class="line">    entry:&#123;</div><div class="line">        index:<span class="string">"./js/index.js"</span>,</div><div class="line">        singup:<span class="string">"./js/singup.js"</span></div><div class="line">    &#125;,</div><div class="line">    output:&#123;</div><div class="line">        filename:<span class="string">"[name].main.js"</span>,  //name就是上面entry里面的键值</div><div class="line">        path:__drename+<span class="string">"/dist"</span>     //dist大家打包后都喜欢放在dist文件夹</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">打包后的在index.html中就可以这样引入了 ../dist/index.main.js;</div></pre></td></tr></table></figure></p>
-<p><strong>loader：</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">   //loader就是告诉webpack加载不是js的文件时怎么办。列如 css文件</div><div class="line">   但是我们首先得先下载相应的loader:npm i -D css-loader style-loader。</div><div class="line">   比如，我们在index.js里面 import <span class="string">"../css/index.css"</span>,那这样子打包肯定会报错，所以我们需要配置一下。</div><div class="line">   module.exports=&#123;</div><div class="line">       entry:&#123;</div><div class="line">           index:<span class="string">"./js/index.js"</span>,</div><div class="line">           singup:<span class="string">"./js/singup.js"</span></div><div class="line">       &#125;,</div><div class="line">       output:&#123;</div><div class="line">           filename:<span class="string">"[name].main.js"</span>,  //name就是上面entry里面的键值</div><div class="line">           path:__drename+<span class="string">"/dist"</span>     //dist大家打包后都喜欢放在dist文件夹</div><div class="line">       &#125;,</div><div class="line">       module:&#123;</div><div class="line">           rules:[</div><div class="line">               &#123;</div><div class="line">                   <span class="built_in">test</span>:/\.css$/, //正则 就是以.css结尾的文件都会被处理</div><div class="line">                   use:[<span class="string">"style-loader"</span>,<span class="string">"css-laoder"</span>] //这里的加载顺序是从右向左,style-loader会直接吧打包后的样式直接放到index.html的&lt;style&gt;&lt;/style&gt;里面。</div><div class="line">               &#125;</div><div class="line">           ]</div><div class="line">       &#125;</div><div class="line">   &#125;</div><div class="line">这里还要提一点在模块里配置的css文件的加载顺序是跟平常一样的，如 ：</div><div class="line">import <span class="string">"../css/index.css"</span> </div><div class="line">import <span class="string">"../css/index2.css"</span></div><div class="line">如果index2.css文件里有与index.css的样式冲突了，会加载index2.css里的样式！</div></pre></td></tr></table></figure></p>
-<h3 id="以上就是我理解的webpack。好记性不如烂笔头！！！！"><a href="#以上就是我理解的webpack。好记性不如烂笔头！！！！" class="headerlink" title="以上就是我理解的webpack。好记性不如烂笔头！！！！"></a>以上就是我理解的webpack。好记性不如烂笔头！！！！</h3>
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>心有猛虎，细嗅蔷薇<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -217,115 +189,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://qiuzhichao.me/2018/09/04/webpack/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/10/11/常见的基础问题/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          常见的基础问题
-        
-      </div>
-    </a>
   
   
-    <a href="/2018/09/03/正则表达式/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">正则表达式</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -348,8 +224,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
